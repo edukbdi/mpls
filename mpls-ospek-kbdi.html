@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Hal yang Tidak Perlu Ada di MPLS Maupun Ospek Kampus | KBDI</title>
+  <meta name="description" content="Hukuman fisik, atribut aneh, perburuan tanda tangan senior: tiga pola yang terus diwariskan di MPLS dan ospek kampus Indonesia meski sudah dilarang sejak 2016."/>
+  <link rel="icon" href="https://edukbdi.github.io/logo_KBDI/kbdi_trans.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:#0d0f14;--bg2:#111520;--bg3:#161b28;
+      --surface:#1a2035;--surface2:#1e2640;
+      --border:rgba(37,99,235,0.15);
+      --accent:#2563eb;--accent2:#60a5fa;
+      --accent-dim:rgba(37,99,235,0.10);
+      --text:#e2e8f0;--text-muted:#94a3b8;--text-faint:#64748b;
+    }
+    html.light {
+      --bg:#f0f4ff;--bg2:#e8eef9;--bg3:#dde5f5;
+      --surface:#ffffff;--surface2:#eef2fc;
+      --border:rgba(37,99,235,0.18);
+      --accent:#1d4ed8;--accent2:#2563eb;
+      --accent-dim:rgba(37,99,235,0.07);
+      --text:#0f172a;--text-muted:#374151;--text-faint:#6b7280;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.7;transition:background .3s,color .3s;overflow-x:hidden;}
+
+    /* HERO */
+    .hero{
+      position:relative;min-height:92vh;
+      background:#0a1228;
+      display:flex;align-items:flex-end;
+      overflow:hidden;
+    }
+    .hero-scene{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      pointer-events:none;
+    }
+    .hero-scene svg{
+      width:100%;
+      height:100%;
+    }
+    .hero-content{
+      position:relative;z-index:2;
+      padding:5rem 5% 4.5rem;
+      max-width:680px;
+    }
+    .hero-eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      font-family:"DM Sans",sans-serif;font-size:.72rem;font-weight:600;
+      letter-spacing:.18em;text-transform:uppercase;color:#60a5fa;
+      margin-bottom:1.2rem;opacity:0;animation:fadeUp .7s .1s forwards;
+    }
+    .hero-eyebrow::before{content:"";display:inline-block;width:28px;height:2px;background:#60a5fa;border-radius:2px;}
+    .hero-title{
+      font-family:"Bebas Neue",sans-serif;
+      font-size:clamp(2.8rem,6.5vw,5rem);
+      line-height:1.0;letter-spacing:.02em;color:#e2e8f0;
+      margin-bottom:1.2rem;max-width:560px;
+      opacity:0;animation:fadeUp .8s .25s forwards;
+    }
+    .hero-subtitle{
+      font-family:"Source Serif 4",serif;font-style:italic;
+      font-size:clamp(.95rem,2vw,1.2rem);color:#94a3b8;
+      margin-bottom:2rem;max-width:520px;
+      opacity:0;animation:fadeUp .8s .4s forwards;
+    }
+    .hero-meta{
+      display:flex;flex-wrap:wrap;gap:1.2rem;
+      opacity:0;animation:fadeUp .8s .55s forwards;
+    }
+    .hero-meta-item{font-size:.78rem;color:#64748b;letter-spacing:.08em;}
+    .hero-meta-item span{color:#60a5fa;margin-right:4px;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+    /* MAIN */
+    main{background:var(--bg);transition:background .3s;}
+    .article-body{max-width:780px;margin:0 auto;padding:4rem 20px 5rem;}
+    .article-body p{font-family:"Source Serif 4",serif;font-size:1.05rem;line-height:1.85;color:var(--text);margin-bottom:1.4rem;}
+    .article-body strong{font-weight:600;color:var(--accent2);}
+    .article-body em{font-style:italic;}
+
+    .section-heading{font-family:"Playfair Display",serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:600;color:var(--text);margin:3.2rem 0 1.2rem;padding-bottom:.6rem;border-bottom:2px solid var(--accent);}
+
+    .pilar-badge{display:inline-flex;align-items:center;gap:10px;background:var(--accent-dim);border:1px solid var(--border);border-left:3px solid var(--accent);padding:.6rem 1.2rem;border-radius:0 6px 6px 0;margin:2.2rem 0 1rem;}
+    .pilar-badge .num{font-family:"Bebas Neue",sans-serif;font-size:2rem;color:var(--accent);line-height:1;}
+    .pilar-badge .label{font-family:"DM Sans",sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);}
+
+    .pull-quote{border-left:3px solid var(--accent);padding:1.2rem 1.5rem;margin:2.2rem 0;background:var(--accent-dim);border-radius:0 8px 8px 0;}
+    .pull-quote p{font-family:"Playfair Display",serif;font-style:italic;font-size:1.1rem;color:var(--text);margin-bottom:.5rem !important;}
+    .pull-quote cite{font-size:.82rem;color:var(--text-faint);font-style:normal;}
+
+    .highlight-box{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:0 0 8px 8px;padding:1.4rem 1.6rem;margin:2rem 0;}
+    .highlight-box h4{font-family:"DM Sans",sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent2);margin-bottom:.8rem;}
+    .highlight-box ul{padding-left:1.2rem;}
+    .highlight-box ul li{font-family:"Source Serif 4",serif;font-size:.95rem;color:var(--text-muted);margin-bottom:.4rem;line-height:1.6;}
+
+    .article-note{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1rem 1.4rem;margin:1.8rem 0;font-size:.88rem;color:var(--text-muted);font-family:"DM Sans",sans-serif;}
+    .article-note strong{color:var(--accent2);}
+
+    .case-box{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.5rem;margin:1.4rem 0;}
+    .case-box .case-title{font-family:"DM Sans",sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;}
+    .case-box p{font-size:.92rem;margin-bottom:0 !important;}
+
+    .data-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0;}
+    .data-card{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:0 0 8px 8px;padding:1rem;text-align:center;}
+    .data-card .num{font-family:"Bebas Neue",sans-serif;font-size:2rem;color:var(--accent2);line-height:1;}
+    .data-card .desc{font-size:.78rem;color:var(--text-faint);font-family:"DM Sans",sans-serif;margin-top:.3rem;}
+
+    /* SVG CHAR INLINE (pilar 2) */
+    .char-inline{display:flex;justify-content:center;margin:2rem 0;background:var(--surface);border-radius:12px;border:1px solid var(--border);padding:1.5rem 1rem .8rem;}
+
+    .sources{border-top:1px solid var(--border);padding-top:2.5rem;margin-top:3rem;}
+    .sources h3{font-family:"DM Sans",sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--text-faint);margin-bottom:1rem;}
+    .sources ol{padding-left:1.4rem;}
+    .sources ol li{font-size:.82rem;color:var(--text-faint);margin-bottom:.5rem;font-family:"DM Sans",sans-serif;line-height:1.5;}
+    .sources ol li a{color:var(--accent2);text-decoration:none;}
+    .sources ol li a:hover{text-decoration:underline;}
+
+    .svgbg{fill:var(--surface)}
+    .char-inline{display:flex;justify-content:center;margin:2rem 0;background:var(--surface);border-radius:12px;border:1px solid var(--border);padding:1.5rem 1rem .8rem;}
+    html.light .hero-title{color:#0f172a !important}
+    html.light .hero-subtitle{color:#1e3a5f !important}
+    html.light .hero-eyebrow{color:#1d4ed8 !important}
+    html.light .hero-meta-item{color:#374151 !important}
+    html.light .hero-meta-item span{color:#1d4ed8 !important}
+    html.light .hero-title{color:#0a1628 !important;text-shadow:0 2px 12px rgba(255,255,255,0.95),0 0 30px rgba(255,255,255,0.8) !important}
+    html.light .hero-subtitle{color:#1e3a5f !important;text-shadow:0 1px 8px rgba(255,255,255,0.9),0 0 20px rgba(255,255,255,0.7) !important}
+    html.light .hero-eyebrow{color:#1d4ed8 !important;text-shadow:0 1px 6px rgba(255,255,255,0.9) !important}
+    html.light .hero-meta-item{color:#1e3a5f !important;text-shadow:0 1px 6px rgba(255,255,255,0.9) !important}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    @media(max-width:768px){
+      .hero-content{padding:3rem 5% 3rem;}
+      .article-body{padding:2.5rem 16px 3rem;}
+      .data-strip{grid-template-columns:1fr 1fr;}
+      .data-strip .data-card:last-child{grid-column:1/-1;}
+      .pull-quote p{font-size:1rem;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+  <!-- Panoramic MPLS scene -->
+  <div class="hero-scene">
+    <svg viewBox="0 0 1050 540" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+<defs>
+  <style>
+    /* Dark mode (default) */
+    .h-sky-rect { fill: #040810; }
+    .h-horiz { fill: #0a1e3a; }
+    .h-star { opacity: 0.5; }
+    .h-sun { opacity: 0; }
+    .h-cloud { opacity: 0; }
+    .h-ground { fill: #060e0a; }
+    .h-ground2 { fill: #040a06; }
+    .h-ground-line { stroke: #0a1818; }
+    .h-bld { fill: #080f1e; }
+    .h-bld-roof { fill: #0a1520; }
+    .h-bld-roof2 { fill: #060a16; }
+    .h-win1 { fill: #0d1c35; }
+    .h-win2 { fill: #0b1830; }
+    .h-win3 { fill: #09142a; }
+    .h-pillar { fill: #060c18; }
+    .h-door { fill: #050a14; }
+    .h-door2 { fill: #060c18; }
+    .h-tree-trunk { fill: #070d18; }
+    .h-tree1 { fill: #091820; }
+    .h-tree2 { fill: #0b1e28; }
+    .h-pole { fill: #1a2a40; }
+    .h-pole-base { fill: #122030; }
+    .h-pole-base2 { fill: #0e1828; }
+    .h-flag-line { stroke: #555; }
+    .h-label { fill: #0f2040; }
+    .h-horizon { fill: #0d2244; }
+
+    /* Light mode */
+    html.light .h-sky-rect { fill: #5ba8dc; }
+    html.light .h-horiz { fill: #a8d8f0; }
+    html.light .h-star { opacity: 0; }
+    html.light .h-sun { opacity: 1; }
+    html.light .h-cloud { opacity: 0.9; }
+    html.light .h-ground { fill: #4a7a30; }
+    html.light .h-ground2 { fill: #3a6022; }
+    html.light .h-ground-line { stroke: #3a6020; }
+    html.light .h-bld { fill: #c8bca8; }
+    html.light .h-bld-roof { fill: #b03020; }
+    html.light .h-bld-roof2 { fill: #982818; }
+    html.light .h-win1 { fill: #7aa8d0; }
+    html.light .h-win2 { fill: #6898c0; }
+    html.light .h-win3 { fill: #5888b0; }
+    html.light .h-pillar { fill: #a8a090; }
+    html.light .h-door { fill: #7a6a58; }
+    html.light .h-door2 { fill: #8a7a68; }
+    html.light .h-tree-trunk { fill: #5a3a18; }
+    html.light .h-tree1 { fill: #2a6018; }
+    html.light .h-tree2 { fill: #348020; }
+    html.light .h-pole { fill: #888880; }
+    html.light .h-pole-base { fill: #aaa898; }
+    html.light .h-pole-base2 { fill: #989080; }
+    html.light .h-flag-line { stroke: #aaa; }
+    html.light .h-label { fill: #5a3018; }
+    html.light .h-horizon { fill: #c8e8f8; }
+  </style>
+  <linearGradient id="skyg-dark" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#040810"/>
+    <stop offset="65%" stop-color="#060d1c"/>
+    <stop offset="100%" stop-color="#091525"/>
+  </linearGradient>
+  <linearGradient id="skyg-light" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2a80c8"/>
+    <stop offset="55%" stop-color="#5aaae0"/>
+    <stop offset="100%" stop-color="#90c8f0"/>
+  </linearGradient>
+  <linearGradient id="btmg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#040810" stop-opacity="0"/>
+    <stop offset="45%" stop-color="#040810" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#040810" stop-opacity="0.96"/>
+  </linearGradient>
+  <linearGradient id="btmg-light" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f0f8ff" stop-opacity="0"/>
+    <stop offset="45%" stop-color="#f0f8ff" stop-opacity="0.55"/>
+    <stop offset="100%" stop-color="#f0f8ff" stop-opacity="0.96"/>
+  </linearGradient>
+</defs>
+
+<!-- SKY dark -->
+<rect width="1050" height="540" fill="url(#skyg-dark)" class="h-sky-dark-bg"/>
+<!-- SKY light (overlay, hidden by default) -->
+<rect width="1050" height="540" fill="url(#skyg-light)" style="opacity:0"/>
+<style>html.light .h-sky-dark-bg{fill:url(#skyg-light)}</style>
+
+<!-- Horizon glow -->
+<ellipse cx="525" cy="252" rx="500" ry="55" class="h-horiz" opacity="0.6"/>
+<ellipse cx="525" cy="262" rx="300" ry="28" class="h-horizon" opacity="0.4"/>
+
+<!-- Stars (dark only) -->
+<g class="h-star">
+  <circle cx="60" cy="35" r="1.2" fill="white" opacity="0.9"/>
+  <circle cx="180" cy="20" r="0.9" fill="white" opacity="0.7"/>
+  <circle cx="320" cy="50" r="1.1" fill="white" opacity="0.8"/>
+  <circle cx="480" cy="28" r="0.8" fill="white" opacity="0.6"/>
+  <circle cx="650" cy="15" r="1.3" fill="white" opacity="0.9"/>
+  <circle cx="800" cy="42" r="1.0" fill="white" opacity="0.7"/>
+  <circle cx="920" cy="18" r="0.7" fill="white" opacity="0.8"/>
+  <circle cx="1010" cy="55" r="1.0" fill="white" opacity="0.6"/>
+  <circle cx="130" cy="62" r="0.8" fill="white" opacity="0.5"/>
+  <circle cx="580" cy="45" r="1.1" fill="white" opacity="0.8"/>
+  <circle cx="740" cy="30" r="0.6" fill="white" opacity="0.7"/>
+  <circle cx="430" cy="12" r="0.9" fill="white" opacity="0.9"/>
+  <circle cx="250" cy="40" r="0.7" fill="white" opacity="0.6"/>
+  <circle cx="860" cy="25" r="1.0" fill="white" opacity="0.7"/>
+  <circle cx="55"  cy="80" r="0.8" fill="white" opacity="0.5"/>
+  <circle cx="970" cy="70" r="0.9" fill="white" opacity="0.6"/>
+</g>
+
+<!-- Sun (light only) -->
+<g class="h-sun">
+  <circle cx="88" cy="80" r="38" fill="#ffd700" opacity="0.9"/>
+  <circle cx="88" cy="80" r="28" fill="#ffe44a"/>
+  <!-- Sun rays -->
+  <line x1="88" y1="30" x2="88" y2="18" stroke="#ffd700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="88" y1="130" x2="88" y2="142" stroke="#ffd700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="38" y1="80" x2="26" y2="80" stroke="#ffd700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="138" y1="80" x2="150" y2="80" stroke="#ffd700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="52" y1="44" x2="44" y2="36" stroke="#ffd700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="124" y1="116" x2="132" y2="124" stroke="#ffd700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="52" y1="116" x2="44" y2="124" stroke="#ffd700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="124" y1="44" x2="132" y2="36" stroke="#ffd700" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+</g>
+
+<!-- Clouds (light only) -->
+<g class="h-cloud">
+  <ellipse cx="300" cy="75" rx="55" ry="22" fill="white" opacity="0.85"/>
+  <ellipse cx="260" cy="85" rx="35" ry="18" fill="white" opacity="0.85"/>
+  <ellipse cx="340" cy="83" rx="38" ry="18" fill="white" opacity="0.85"/>
+  <ellipse cx="700" cy="55" rx="48" ry="18" fill="white" opacity="0.75"/>
+  <ellipse cx="665" cy="63" rx="30" ry="14" fill="white" opacity="0.75"/>
+  <ellipse cx="735" cy="62" rx="32" ry="14" fill="white" opacity="0.75"/>
+  <ellipse cx="920" cy="90" rx="40" ry="16" fill="white" opacity="0.7"/>
+  <ellipse cx="892" cy="97" rx="26" ry="12" fill="white" opacity="0.7"/>
+  <ellipse cx="948" cy="96" rx="28" ry="12" fill="white" opacity="0.7"/>
+</g>
+
+<!-- GEDUNG KIRI -->
+<rect x="0" y="115" width="282" height="390" class="h-bld"/>
+<polygon points="0,115 282,115 282,100 255,92 27,92 0,100" class="h-bld-roof"/>
+<rect x="0" y="100" width="282" height="16" class="h-pillar"/>
+<rect x="16" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="54" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="92" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="130" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="168" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="206" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="244" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="16" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="54" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="92" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="130" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="168" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="206" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="244" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="16" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="54" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="92" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="130" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="168" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="206" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="244" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="0" y="100" width="8" height="390" class="h-pillar"/>
+<rect x="46" y="100" width="6" height="390" class="h-pillar" opacity="0.5"/>
+<rect x="92" y="100" width="6" height="390" class="h-pillar" opacity="0.4"/>
+<rect x="138" y="100" width="6" height="390" class="h-pillar" opacity="0.4"/>
+<rect x="184" y="100" width="6" height="390" class="h-pillar" opacity="0.4"/>
+<rect x="230" y="100" width="6" height="390" class="h-pillar" opacity="0.4"/>
+<rect x="274" y="100" width="8" height="390" class="h-pillar"/>
+
+<!-- GEDUNG KANAN -->
+<rect x="768" y="115" width="282" height="390" class="h-bld"/>
+<polygon points="768,115 1050,115 1050,100 1023,92 795,92 768,100" class="h-bld-roof"/>
+<rect x="768" y="100" width="282" height="16" class="h-pillar"/>
+<rect x="786" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="824" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="862" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="900" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="938" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="976" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="1014" y="130" width="26" height="18" rx="2" class="h-win1"/>
+<rect x="786" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="824" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="862" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="900" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="938" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="976" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="1014" y="162" width="26" height="18" rx="2" class="h-win2"/>
+<rect x="786" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="824" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="862" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="900" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="938" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="976" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="1014" y="194" width="26" height="18" rx="2" class="h-win3"/>
+<rect x="1042" y="100" width="8" height="390" class="h-pillar"/>
+<rect x="996" y="100" width="6" height="390" class="h-pillar" opacity="0.5"/>
+<rect x="950" y="100" width="6" height="390" class="h-pillar" opacity="0.4"/>
+<rect x="904" y="100" width="6" height="390" class="h-pillar" opacity="0.4"/>
+<rect x="858" y="100" width="6" height="390" class="h-pillar" opacity="0.4"/>
+<rect x="812" y="100" width="6" height="390" class="h-pillar" opacity="0.4"/>
+<rect x="768" y="100" width="8" height="390" class="h-pillar"/>
+
+<!-- GEDUNG TENGAH -->
+<rect x="282" y="155" width="486" height="113" class="h-bld"/>
+<polygon points="282,155 768,155 768,140 745,132 305,132 282,140" class="h-bld-roof2"/>
+<rect x="492" y="112" width="66" height="24" rx="2" class="h-door"/>
+<text x="525" y="128" class="h-label" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="3">S M A</text>
+<rect x="302" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="338" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="374" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="410" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="446" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="482" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="518" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="554" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="590" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="626" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="662" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="698" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="734" y="165" width="22" height="16" rx="2" class="h-win2"/>
+<rect x="500" y="216" width="50" height="52" rx="3" class="h-door"/>
+<rect x="506" y="220" width="17" height="45" rx="2" class="h-door2"/>
+<rect x="527" y="220" width="17" height="45" rx="2" class="h-door2"/>
+
+<!-- Pohon -->
+<rect x="252" y="198" width="7" height="70" rx="2" class="h-tree-trunk"/>
+<ellipse cx="255" cy="188" rx="20" ry="26" class="h-tree1"/>
+<ellipse cx="255" cy="180" rx="14" ry="18" class="h-tree2"/>
+<rect x="791" y="198" width="7" height="70" rx="2" class="h-tree-trunk"/>
+<ellipse cx="794" cy="188" rx="20" ry="26" class="h-tree1"/>
+<ellipse cx="794" cy="180" rx="14" ry="18" class="h-tree2"/>
+
+<!-- TIANG BENDERA -->
+<rect x="522" y="55" width="5" height="215" rx="2" class="h-pole"/>
+<rect x="527" y="60" width="68" height="21" rx="1" fill="#cc0000" transform="skewX(-4)"/>
+<rect x="527" y="81" width="68" height="21" rx="1" fill="#e0e0e0" transform="skewX(-4)"/>
+<line x1="524" y1="60" x2="524" y2="105" class="h-flag-line" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+<rect x="514" y="268" width="20" height="10" rx="3" class="h-pole-base"/>
+<rect x="508" y="276" width="32" height="6" rx="3" class="h-pole-base2"/>
+
+<!-- LAPANGAN -->
+<rect x="0" y="270" width="1050" height="270" class="h-ground"/>
+<line x1="0" y1="270" x2="1050" y2="270" class="h-ground-line" stroke-width="1.2"/>
+<line x1="0" y1="295" x2="1050" y2="295" class="h-ground-line" stroke-width="0.6" opacity="0.4"/>
+
+
+<!-- SISWA -->
+<ellipse cx="310" cy="292" rx="5" ry="1" fill="#000" opacity="0.2"/>
+<rect x="306" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="310" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="306" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="311" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="305" y="261" width="10" height="14" rx="1" fill="#edf2f7"/>
+<rect x="309" y="261" width="2" height="2" rx="3" fill="#dde6f0"/>
+<rect x="304" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<rect x="313" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<ellipse cx="306" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="314" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<rect x="309" y="260" width="2" height="2" rx="2" fill="#c8956c"/>
+<ellipse cx="310" cy="256" rx="5" ry="5" fill="#1e1208"/>
+<ellipse cx="310" cy="254" rx="5" ry="1" fill="#22324a"/>
+<rect x="306" y="251" width="9" height="3" rx="1" fill="#22324a"/>
+<ellipse cx="310" cy="251" rx="4" ry="1" fill="#22324a" opacity="0.7"/>
+<ellipse cx="390" cy="292" rx="5" ry="1" fill="#000" opacity="0.2"/>
+<rect x="386" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="390" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="386" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="391" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="385" y="261" width="10" height="14" rx="1" fill="#edf2f7"/>
+<rect x="389" y="261" width="2" height="2" rx="3" fill="#dde6f0"/>
+<rect x="384" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<rect x="393" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<ellipse cx="386" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="394" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<rect x="389" y="260" width="2" height="2" rx="2" fill="#c8956c"/>
+<ellipse cx="390" cy="256" rx="5" ry="5" fill="#1e1208"/>
+<ellipse cx="390" cy="254" rx="5" ry="1" fill="#182840"/>
+<rect x="386" y="251" width="9" height="3" rx="1" fill="#182840"/>
+<ellipse cx="390" cy="251" rx="4" ry="1" fill="#182840" opacity="0.7"/>
+<ellipse cx="470" cy="292" rx="5" ry="1" fill="#000" opacity="0.2"/>
+<rect x="466" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="470" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="466" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="471" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="465" y="261" width="10" height="14" rx="1" fill="#edf2f7"/>
+<rect x="469" y="261" width="2" height="2" rx="3" fill="#dde6f0"/>
+<rect x="464" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<rect x="473" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<ellipse cx="466" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="474" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<rect x="469" y="260" width="2" height="2" rx="2" fill="#c8956c"/>
+<ellipse cx="470" cy="256" rx="5" ry="5" fill="#1e1208"/>
+<ellipse cx="470" cy="254" rx="5" ry="1" fill="#22324a"/>
+<rect x="466" y="251" width="9" height="3" rx="1" fill="#22324a"/>
+<ellipse cx="470" cy="251" rx="4" ry="1" fill="#22324a" opacity="0.7"/>
+<ellipse cx="550" cy="292" rx="5" ry="1" fill="#000" opacity="0.2"/>
+<rect x="546" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="550" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="546" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="551" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="545" y="261" width="10" height="14" rx="1" fill="#edf2f7"/>
+<rect x="549" y="261" width="2" height="2" rx="3" fill="#dde6f0"/>
+<rect x="544" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<rect x="553" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<ellipse cx="546" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="554" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<rect x="549" y="260" width="2" height="2" rx="2" fill="#c8956c"/>
+<ellipse cx="550" cy="256" rx="5" ry="5" fill="#1e1208"/>
+<ellipse cx="550" cy="254" rx="5" ry="1" fill="#182840"/>
+<rect x="546" y="251" width="9" height="3" rx="1" fill="#182840"/>
+<ellipse cx="550" cy="251" rx="4" ry="1" fill="#182840" opacity="0.7"/>
+<ellipse cx="630" cy="292" rx="5" ry="1" fill="#000" opacity="0.2"/>
+<rect x="626" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="630" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="626" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="631" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="625" y="261" width="10" height="14" rx="1" fill="#edf2f7"/>
+<rect x="629" y="261" width="2" height="2" rx="3" fill="#dde6f0"/>
+<rect x="624" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<rect x="633" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<ellipse cx="626" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="634" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<rect x="629" y="260" width="2" height="2" rx="2" fill="#c8956c"/>
+<ellipse cx="630" cy="256" rx="5" ry="5" fill="#1e1208"/>
+<ellipse cx="630" cy="254" rx="5" ry="1" fill="#22324a"/>
+<rect x="626" y="251" width="9" height="3" rx="1" fill="#22324a"/>
+<ellipse cx="630" cy="251" rx="4" ry="1" fill="#22324a" opacity="0.7"/>
+<ellipse cx="710" cy="292" rx="5" ry="1" fill="#000" opacity="0.2"/>
+<rect x="706" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="710" y="285" width="4" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="706" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="711" y="275" width="3" height="13" rx="1" fill="#1e2535"/>
+<rect x="705" y="261" width="10" height="14" rx="1" fill="#edf2f7"/>
+<rect x="709" y="261" width="2" height="2" rx="3" fill="#dde6f0"/>
+<rect x="704" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<rect x="713" y="263" width="3" height="10" rx="1" fill="#edf2f7"/>
+<ellipse cx="706" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="714" cy="273" rx="1" ry="1" fill="#c8956c"/>
+<rect x="709" y="260" width="2" height="2" rx="2" fill="#c8956c"/>
+<ellipse cx="710" cy="256" rx="5" ry="5" fill="#1e1208"/>
+<ellipse cx="710" cy="254" rx="5" ry="1" fill="#182840"/>
+<rect x="706" y="251" width="9" height="3" rx="1" fill="#182840"/>
+<ellipse cx="710" cy="251" rx="4" ry="1" fill="#182840" opacity="0.7"/>
+<ellipse cx="365" cy="312" rx="7" ry="1" fill="#000" opacity="0.2"/>
+<rect x="359" y="305" width="5" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="365" y="305" width="5" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="359" y="291" width="4" height="17" rx="1" fill="#1e2535"/>
+<rect x="366" y="291" width="4" height="17" rx="1" fill="#1e2535"/>
+<rect x="358" y="273" width="14" height="18" rx="2" fill="#edf2f7"/>
+<rect x="364" y="273" width="3" height="2" rx="3" fill="#dde6f0"/>
+<rect x="356" y="275" width="4" height="13" rx="1" fill="#edf2f7"/>
+<rect x="370" y="275" width="4" height="13" rx="1" fill="#edf2f7"/>
+<ellipse cx="358" cy="288" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="372" cy="288" rx="1" ry="1" fill="#c8956c"/>
+<rect x="364" y="271" width="3" height="3" rx="2" fill="#c8956c"/>
+<ellipse cx="365" cy="267" rx="6" ry="6" fill="#1e1208"/>
+<ellipse cx="365" cy="265" rx="6" ry="2" fill="#1e3450"/>
+<rect x="360" y="261" width="11" height="4" rx="1" fill="#1e3450"/>
+<ellipse cx="365" cy="261" rx="5" ry="1" fill="#1e3450" opacity="0.7"/>
+<ellipse cx="455" cy="312" rx="7" ry="1" fill="#000" opacity="0.2"/>
+<rect x="449" y="305" width="5" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="455" y="305" width="5" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="449" y="291" width="4" height="17" rx="1" fill="#1e2535"/>
+<rect x="456" y="291" width="4" height="17" rx="1" fill="#1e2535"/>
+<rect x="448" y="273" width="14" height="18" rx="2" fill="#edf2f7"/>
+<rect x="454" y="273" width="3" height="2" rx="3" fill="#dde6f0"/>
+<rect x="446" y="275" width="4" height="13" rx="1" fill="#edf2f7"/>
+<rect x="460" y="275" width="4" height="13" rx="1" fill="#edf2f7"/>
+<ellipse cx="448" cy="288" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="462" cy="288" rx="1" ry="1" fill="#c8956c"/>
+<rect x="454" y="271" width="3" height="3" rx="2" fill="#c8956c"/>
+<ellipse cx="455" cy="267" rx="6" ry="6" fill="#1e1208"/>
+<ellipse cx="455" cy="265" rx="6" ry="2" fill="#283e5a"/>
+<rect x="450" y="261" width="11" height="4" rx="1" fill="#283e5a"/>
+<ellipse cx="455" cy="261" rx="5" ry="1" fill="#283e5a" opacity="0.7"/>
+<ellipse cx="545" cy="312" rx="7" ry="1" fill="#000" opacity="0.2"/>
+<rect x="539" y="305" width="5" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="545" y="305" width="5" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="539" y="291" width="4" height="17" rx="1" fill="#1e2535"/>
+<rect x="546" y="291" width="4" height="17" rx="1" fill="#1e2535"/>
+<rect x="538" y="273" width="14" height="18" rx="2" fill="#edf2f7"/>
+<rect x="544" y="273" width="3" height="2" rx="3" fill="#dde6f0"/>
+<rect x="536" y="275" width="4" height="13" rx="1" fill="#edf2f7"/>
+<rect x="550" y="275" width="4" height="13" rx="1" fill="#edf2f7"/>
+<ellipse cx="538" cy="288" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="552" cy="288" rx="1" ry="1" fill="#c8956c"/>
+<rect x="544" y="271" width="3" height="3" rx="2" fill="#c8956c"/>
+<ellipse cx="545" cy="267" rx="6" ry="6" fill="#1e1208"/>
+<ellipse cx="545" cy="265" rx="6" ry="2" fill="#1e3450"/>
+<rect x="540" y="261" width="11" height="4" rx="1" fill="#1e3450"/>
+<ellipse cx="545" cy="261" rx="5" ry="1" fill="#1e3450" opacity="0.7"/>
+<ellipse cx="635" cy="312" rx="7" ry="1" fill="#000" opacity="0.2"/>
+<rect x="629" y="305" width="5" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="635" y="305" width="5" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="629" y="291" width="4" height="17" rx="1" fill="#1e2535"/>
+<rect x="636" y="291" width="4" height="17" rx="1" fill="#1e2535"/>
+<rect x="628" y="273" width="14" height="18" rx="2" fill="#edf2f7"/>
+<rect x="634" y="273" width="3" height="2" rx="3" fill="#dde6f0"/>
+<rect x="626" y="275" width="4" height="13" rx="1" fill="#edf2f7"/>
+<rect x="640" y="275" width="4" height="13" rx="1" fill="#edf2f7"/>
+<ellipse cx="628" cy="288" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="642" cy="288" rx="1" ry="1" fill="#c8956c"/>
+<rect x="634" y="271" width="3" height="3" rx="2" fill="#c8956c"/>
+<ellipse cx="635" cy="267" rx="6" ry="6" fill="#1e1208"/>
+<ellipse cx="635" cy="265" rx="6" ry="2" fill="#283e5a"/>
+<rect x="630" y="261" width="11" height="4" rx="1" fill="#283e5a"/>
+<ellipse cx="635" cy="261" rx="5" ry="1" fill="#283e5a" opacity="0.7"/>
+<ellipse cx="725" cy="312" rx="7" ry="1" fill="#000" opacity="0.2"/>
+<rect x="719" y="305" width="5" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="725" y="305" width="5" height="3" rx="3" fill="#1a1a1a"/>
+<rect x="719" y="291" width="4" height="17" rx="1" fill="#1e2535"/>
+<rect x="726" y="291" width="4" height="17" rx="1" fill="#1e2535"/>
+<rect x="718" y="273" width="14" height="18" rx="2" fill="#edf2f7"/>
+<rect x="724" y="273" width="3" height="2" rx="3" fill="#dde6f0"/>
+<rect x="716" y="275" width="4" height="13" rx="1" fill="#edf2f7"/>
+<rect x="730" y="275" width="4" height="13" rx="1" fill="#edf2f7"/>
+<ellipse cx="718" cy="288" rx="1" ry="1" fill="#c8956c"/>
+<ellipse cx="732" cy="288" rx="1" ry="1" fill="#c8956c"/>
+<rect x="724" y="271" width="3" height="3" rx="2" fill="#c8956c"/>
+<ellipse cx="725" cy="267" rx="6" ry="6" fill="#1e1208"/>
+<ellipse cx="725" cy="265" rx="6" ry="2" fill="#1e3450"/>
+<rect x="720" y="261" width="11" height="4" rx="1" fill="#1e3450"/>
+<ellipse cx="725" cy="261" rx="5" ry="1" fill="#1e3450" opacity="0.7"/>
+<ellipse cx="324" cy="344" rx="9" ry="1" fill="#000" opacity="0.2"/>
+<rect x="317" y="335" width="6" height="5" rx="3" fill="#1a1a1a"/>
+<rect x="324" y="335" width="6" height="5" rx="3" fill="#1a1a1a"/>
+<rect x="317" y="318" width="5" height="22" rx="2" fill="#1e2535"/>
+<rect x="325" y="318" width="5" height="22" rx="2" fill="#1e2535"/>
+<rect x="315" y="295" width="18" height="23" rx="3" fill="#edf2f7"/>
+<rect x="322" y="295" width="4" height="3" rx="3" fill="#dde6f0"/>
+<rect x="312" y="298" width="5" height="17" rx="2" fill="#edf2f7"/>
+<rect x="331" y="298" width="5" height="17" rx="2" fill="#edf2f7"/>
+<ellipse cx="315" cy="315" rx="2" ry="2" fill="#c8956c"/>
+<ellipse cx="333" cy="315" rx="2" ry="2" fill="#c8956c"/>
+<rect x="322" y="292" width="4" height="4" rx="2" fill="#c8956c"/>
+<ellipse cx="324" cy="286" rx="8" ry="8" fill="#1e1208"/>
+<ellipse cx="324" cy="283" rx="8" ry="2" fill="#243e5e"/>
+<rect x="317" y="278" width="15" height="5" rx="1" fill="#243e5e"/>
+<ellipse cx="324" cy="278" rx="7" ry="1" fill="#243e5e" opacity="0.7"/>
+<ellipse cx="420" cy="344" rx="9" ry="1" fill="#000" opacity="0.2"/>
+<rect x="413" y="335" width="6" height="5" rx="3" fill="#1a1a1a"/>
+<rect x="420" y="335" width="6" height="5" rx="3" fill="#1a1a1a"/>
+<rect x="413" y="318" width="5" height="22" rx="2" fill="#1e2535"/>
+<rect x="421" y="318" width="5" height="22" rx="2" fill="#1e2535"/>
+<rect x="411" y="295" width="18" height="23" rx="3" fill="#edf2f7"/>
+<rect x="418" y="295" width="4" height="3" rx="3" fill="#dde6f0"/>
+<rect x="408" y="298" width="5" height="17" rx="2" fill="#edf2f7"/>
+<rect x="427" y="298" width="5" height="17" rx="2" fill="#edf2f7"/>
+<ellipse cx="411" cy="315" rx="2" ry="2" fill="#c8956c"/>
+<ellipse cx="429" cy="315" rx="2" ry="2" fill="#c8956c"/>
+<rect x="418" y="292" width="4" height="4" rx="2" fill="#c8956c"/>
+<ellipse cx="420" cy="286" rx="8" ry="8" fill="#1e1208"/>
+<ellipse cx="420" cy="283" rx="8" ry="2" fill="#2e4e6e"/>
+<rect x="413" y="278" width="15" height="5" rx="1" fill="#2e4e6e"/>
+<ellipse cx="420" cy="278" rx="7" ry="1" fill="#2e4e6e" opacity="0.7"/>
+<ellipse cx="516" cy="344" rx="9" ry="1" fill="#000" opacity="0.2"/>
+<rect x="509" y="335" width="6" height="5" rx="3" fill="#1a1a1a"/>
+<rect x="516" y="335" width="6" height="5" rx="3" fill="#1a1a1a"/>
+<rect x="509" y="318" width="5" height="22" rx="2" fill="#1e2535"/>
+<rect x="517" y="318" width="5" height="22" rx="2" fill="#1e2535"/>
+<rect x="507" y="295" width="18" height="23" rx="3" fill="#edf2f7"/>
+<rect x="514" y="295" width="4" height="3" rx="3" fill="#dde6f0"/>
+<rect x="504" y="298" width="5" height="17" rx="2" fill="#edf2f7"/>
+<rect x="523" y="298" width="5" height="17" rx="2" fill="#edf2f7"/>
+<ellipse cx="507" cy="315" rx="2" ry="2" fill="#c8956c"/>
+<ellipse cx="525" cy="315" rx="2" ry="2" fill="#c8956c"/>
+<rect x="514" y="292" width="4" height="4" rx="2" fill="#c8956c"/>
+<ellipse cx="516" cy="286" rx="8" ry="8" fill="#1e1208"/>
+<ellipse cx="516" cy="283" rx="8" ry="2" fill="#243e5e"/>
+<rect x="509" y="278" width="15" height="5" rx="1" fill="#243e5e"/>
+<ellipse cx="516" cy="278" rx="7" ry="1" fill="#243e5e" opacity="0.7"/>
+<ellipse cx="612" cy="344" rx="9" ry="1" fill="#000" opacity="0.2"/>
+<rect x="605" y="335" width="6" height="5" rx="3" fill="#1a1a1a"/>
+<rect x="612" y="335" width="6" height="5" rx="3" fill="#1a1a1a"/>
+<rect x="605" y="318" width="5" height="22" rx="2" fill="#1e2535"/>
+<rect x="613" y="318" width="5" height="22" rx="2" fill="#1e2535"/>
+<rect x="603" y="295" width="18" height="23" rx="3" fill="#edf2f7"/>
+<rect x="610" y="295" width="4" height="3" rx="3" fill="#dde6f0"/>
+<rect x="600" y="298" width="5" height="17" rx="2" fill="#edf2f7"/>
+<rect x="619" y="298" width="5" height="17" rx="2" fill="#edf2f7"/>
+<ellipse cx="603" cy="315" rx="2" ry="2" fill="#c8956c"/>
+<ellipse cx="621" cy="315" rx="2" ry="2" fill="#c8956c"/>
+<rect x="610" y="292" width="4" height="4" rx="2" fill="#c8956c"/>
+<ellipse cx="612" cy="286" rx="8" ry="8" fill="#1e1208"/>
+<ellipse cx="612" cy="283" rx="8" ry="2" fill="#2e4e6e"/>
+<rect x="605" y="278" width="15" height="5" rx="1" fill="#2e4e6e"/>
+<ellipse cx="612" cy="278" rx="7" ry="1" fill="#2e4e6e" opacity="0.7"/>
+<ellipse cx="708" cy="344" rx="9" ry="1" fill="#000" opacity="0.2"/>
+<rect x="701" y="335" width="6" height="5" rx="3" fill="#1a1a1a"/>
+<rect x="708" y="335" width="6" height="5" rx="3" fill="#1a1a1a"/>
+<rect x="701" y="318" width="5" height="22" rx="2" fill="#1e2535"/>
+<rect x="709" y="318" width="5" height="22" rx="2" fill="#1e2535"/>
+<rect x="699" y="295" width="18" height="23" rx="3" fill="#edf2f7"/>
+<rect x="706" y="295" width="4" height="3" rx="3" fill="#dde6f0"/>
+<rect x="696" y="298" width="5" height="17" rx="2" fill="#edf2f7"/>
+<rect x="715" y="298" width="5" height="17" rx="2" fill="#edf2f7"/>
+<ellipse cx="699" cy="315" rx="2" ry="2" fill="#c8956c"/>
+<ellipse cx="717" cy="315" rx="2" ry="2" fill="#c8956c"/>
+<rect x="706" y="292" width="4" height="4" rx="2" fill="#c8956c"/>
+<ellipse cx="708" cy="286" rx="8" ry="8" fill="#1e1208"/>
+<ellipse cx="708" cy="283" rx="8" ry="2" fill="#243e5e"/>
+<rect x="701" y="278" width="15" height="5" rx="1" fill="#243e5e"/>
+<ellipse cx="708" cy="278" rx="7" ry="1" fill="#243e5e" opacity="0.7"/>
+<!-- Bottom gradient overlay -->
+<rect width="1050" height="540" fill="url(#btmg)" class="h-btm-dark"/>
+<rect width="1050" height="540" fill="url(#btmg-light)" class="h-btm-light" style="opacity:0"/>
+<style>
+  html.light .h-btm-dark { opacity: 0; }
+  html.light .h-btm-light { opacity: 1; }
+</style>
+</svg>
+  </div>
+
+  <!-- Konten teks -->
+  <div class="hero-content">
+    <div class="hero-eyebrow">Pendidikan</div>
+    <h1 class="hero-title">Hal yang Tidak Perlu Ada di MPLS Maupun Ospek Kampus</h1>
+    <p class="hero-subtitle">MPLS dan ospek seharusnya jadi pintu masuk, bukan ritual bertahan hidup</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><span>Kategori</span>Pendidikan</div>
+      <div class="hero-meta-item"><span>Topik</span>MPLS, Ospek, Perpeloncoan</div>
+      <div class="hero-meta-item"><span>Juli</span>2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main>
+<div class="article-body">
+
+  <p class="reveal">Ada dua jenjang pendidikan yang diatur dengan cara berbeda. Untuk sekolah, pemerintah sudah punya regulasi eksplisit yang melarang perpeloncoan sejak 2016, dan regulasi itu baru saja diperbarui lewat Permendikdasmen No. 12 Tahun 2026 yang berlaku sejak 3 Juni 2026. Untuk kampus, hampir tidak ada regulasi nasional setara karena ospek atau PKKMB umumnya diatur kebijakan internal masing-masing institusi, atau bahkan organisasi kemahasiswaan di tingkat jurusan.</p>
+
+  <p class="reveal">Tapi kalau kita lihat apa yang sebenarnya terjadi di lapangan, polanya nyaris identik di kedua jenjang: hukuman fisik, atribut atau tugas yang tidak masuk akal, dan kegiatan mengejar tanda tangan senior tanpa tujuan jelas. Nama acaranya berbeda, MPLS di sekolah dan ospek atau PKKMB di kampus, tapi pola yang berjalan di baliknya sama.</p>
+
+  <p class="reveal">Kalau pola yang sama muncul di dua sistem dengan aturan yang berbeda jauh, itu tanda bahwa akar masalahnya bukan soal aturan. Ada sesuatu yang lebih dalam yang membuat pola ini terus bertahan.</p>
+
+  <h2 class="section-heading reveal">Akar Sejarah dan Budaya</h2>
+
+  <p class="reveal">Tradisi orientasi yang mengandung unsur senioritas dan inisiasi bisa ditelusuri ke praktik <em>ontgroening</em> dari sistem pendidikan tinggi Belanda, yang secara harfiah berarti menghilangkan kehijauan atau kepolosan dari mahasiswa baru. Praktik ini masuk ke Indonesia lewat institusi pendidikan kolonial dan kemudian mengakar di kampus-kampus tua Indonesia.</p>
+
+  <p class="reveal">Di atas warisan kolonial itu, ada lapisan budaya yang lebih struktural: hierarki senior-junior yang kuat, di mana kepatuhan kepada yang lebih senior dianggap wajar dan bahkan perlu dijaga. Era Orde Baru menambah lapisan lagi lewat militerisasi di lingkungan pendidikan, termasuk budaya disiplin fisik yang dianggap sebagai metode pembentukan karakter.</p>
+
+  <p class="reveal">Tapi faktor yang paling menjelaskan kenapa pola ini terus hidup mungkin lebih sederhana dari semua itu: siklus reproduksi. Senior yang menyuruh junior melakukan hal aneh atau menerima hukuman fisik, dulunya juga junior yang mengalami hal yang sama. Alasan yang paling sering terdengar adalah <em>"karena dulu senior gua gituin gua juga."</em> Ini bukan sekadar alasan, ini mekanisme yang membuat tradisi diwariskan dari satu angkatan ke angkatan berikutnya tanpa pernah dievaluasi apakah bermanfaat atau tidak.</p>
+
+<div class="char-inline reveal" style="margin:2rem 0">
+<svg viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:560px">
+<defs>
+  <style>
+    .svgbg{fill:var(--surface)}
+    .svg-node{fill:var(--surface2);stroke:var(--accent);stroke-width:2}
+    .svg-node-hi{fill:var(--accent-dim);stroke:var(--accent);stroke-width:2}
+    .svg-label{fill:var(--text);font-family:"DM Sans",sans-serif;font-weight:600;font-size:13px;text-anchor:middle}
+    .svg-sub{fill:var(--text-muted);font-family:"DM Sans",sans-serif;font-size:10px;text-anchor:middle}
+    .svg-arrow{stroke:var(--accent2);stroke-width:2;fill:none}
+    .svg-arrow-label{fill:var(--text-faint);font-family:"DM Sans",sans-serif;font-size:9.5px;text-anchor:middle}
+    .svg-center{fill:var(--text-faint);font-family:"DM Sans",sans-serif;font-size:10px;text-anchor:middle;font-style:italic}
+    .svg-num{fill:var(--accent);font-family:"Bebas Neue",sans-serif;font-size:20px;text-anchor:middle}
+  </style>
+  <marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M1 1L9 5L1 9" fill="none" stroke-width="1.5" class="svg-arrow" stroke="var(--accent2)"/>
+  </marker>
+</defs>
+<rect width="560" height="320" class="svgbg" rx="12"/>
+<rect width="560" height="320" rx="12" fill="none" stroke="var(--border)" stroke-width="1"/>
+
+<!-- Center label -->
+<text x="280" y="152" class="svg-center">Siklus yang tidak pernah</text>
+<text x="280" y="166" class="svg-center">dievaluasi manfaatnya</text>
+
+<!-- Node 1: Senior (atas) -->
+<ellipse cx="280" cy="58" rx="72" ry="32" class="svg-node-hi"/>
+<text x="280" y="54" class="svg-label">Senior</text>
+<text x="280" y="69" class="svg-sub">Punya kuasa atas junior</text>
+
+<!-- Node 2: Maba/Junior (bawah kiri) -->
+<ellipse cx="118" cy="248" rx="82" ry="32" class="svg-node"/>
+<text x="118" y="244" class="svg-label">Maba / Junior</text>
+<text x="118" y="259" class="svg-sub">Menerima & bertahan</text>
+
+<!-- Node 3: Senior Baru (bawah kanan) -->
+<ellipse cx="442" cy="248" rx="82" ry="32" class="svg-node"/>
+<text x="442" y="244" class="svg-label">Senior Baru</text>
+<text x="442" y="259" class="svg-sub">Lulus, naik angkatan</text>
+
+<!-- Panah 1: Senior → Maba (kiri bawah) -->
+<path d="M226,82 Q160,150 152,218" class="svg-arrow" marker-end="url(#arr-s)"/>
+<text x="162" y="148" class="svg-arrow-label">Memberi hukuman</text>
+<text x="162" y="160" class="svg-arrow-label">dan tugas absurd</text>
+
+<!-- Panah 2: Maba → Senior Baru (kanan) -->
+<path d="M200,252 Q280,285 360,252" class="svg-arrow" marker-end="url(#arr-s)"/>
+<text x="280" y="288" class="svg-arrow-label">"Karena dulu gue juga</text>
+<text x="280" y="300" class="svg-arrow-label">diperlakukan begini"</text>
+
+<!-- Panah 3: Senior Baru → Senior (atas kanan) -->
+<path d="M408,218 Q400,150 334,82" class="svg-arrow" marker-end="url(#arr-s)"/>
+<text x="400" y="148" class="svg-arrow-label">Mewariskan ke</text>
+<text x="400" y="160" class="svg-arrow-label">generasi berikutnya</text>
+
+<!-- Label atas -->
+<text x="280" y="20" class="svg-label" style="font-size:11px;fill:var(--accent2);letter-spacing:2px">SIKLUS REPRODUKSI PERPELONCOAN</text>
+</svg>
+</div>
+
+  <h2 class="section-heading reveal">Kerangka Hukum yang Berbeda, Masalah yang Sama</h2>
+
+  <p class="reveal">Untuk sekolah, aturannya jelas. Permendikbud No. 18 Tahun 2016 tentang Pengenalan Lingkungan Sekolah bagi Siswa Baru secara eksplisit melarang sejumlah praktik: penggunaan atribut tidak relevan seperti tas karung, kaos kaki beda warna, dan papan nama berbentuk rumit; pemberian tugas tidak masuk akal seperti menghitung semut atau berbicara dengan tumbuhan; hukuman fisik yang mengarah pada kekerasan; serta pelibatan kakak kelas sebagai penyelenggara.</p>
+
+  <p class="reveal">Pada 3 Juni 2026, regulasi ini digantikan Permendikdasmen No. 12 Tahun 2026 yang mewajibkan MPLS selama 5 hari di minggu pertama sekolah. Pasal 21 dalam regulasi baru ini mempertahankan dan memperkuat larangan yang sama: perpeloncoan, kekerasan, pungutan biaya, atribut tidak edukatif, hingga pelibatan alumni dan murid yang tidak memenuhi kriteria.</p>
+
+  <p class="reveal">Kampus tidak punya regulasi setara di tingkat nasional. Ospek atau PKKMB umumnya diatur kebijakan internal masing-masing kampus atau organisasi kemahasiswaan di tingkat jurusan, yang levelnya jauh di luar kendali resmi rektorat. Celah ini yang membuat ospek kampus justru lebih rawan penyimpangan, meski secara usia mahasiswa dianggap lebih dewasa dan lebih mampu melindungi diri sendiri.</p>
+
+  <div class="data-strip reveal">
+    <div class="data-card">
+      <div class="num">2016</div>
+      <div class="desc">Tahun Permendikbud 18 melarang perpeloncoan di sekolah</div>
+    </div>
+    <div class="data-card">
+      <div class="num">60</div>
+      <div class="desc">Kasus kekerasan di satuan pendidikan sepanjang 2025 (FSGI)</div>
+    </div>
+    <div class="data-card">
+      <div class="num">358</div>
+      <div class="desc">Korban kekerasan di satuan pendidikan sepanjang 2025 (FSGI)</div>
+    </div>
+  </div>
+
+  <!-- PILAR 1 -->
+  <div class="pilar-badge reveal">
+    <span class="num">01</span>
+    <span class="label">Hukuman Fisik</span>
+  </div>
+
+  <div class="char-inline reveal">
+    <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px">
+  <defs>
+    <style>
+      .svgbg{fill:var(--surface)}
+      .skh{fill:#c8956c}.skdh{fill:#a0724d}.unh{fill:#f0f0f0}.undh{fill:#d0d0d0}.tih{fill:#1a3a6a}.shh{fill:#2a2a2a}.bah{fill:#cc3333}
+      @keyframes tremble{0%,100%{transform:translateX(0)}25%{transform:translateX(-2px)}75%{transform:translateX(2px)}}
+      @keyframes sweat{0%,60%,100%{opacity:0;transform:translateY(0)}70%{opacity:1}90%{opacity:0;transform:translateY(18px)}}
+      @keyframes sweat2{0%,40%,100%{opacity:0;transform:translateY(0)}55%{opacity:1}75%{opacity:0;transform:translateY(14px)}}
+      .char-h{animation:tremble 0.4s ease-in-out infinite}
+      .sw1{animation:sweat 2s ease-in infinite}
+      .sw2{animation:sweat2 2s ease-in infinite 0.7s}
+      .sw3{animation:sweat 2s ease-in infinite 1.3s}
+    </style>
+  </defs>
+  <rect width="480" height="420" class="svgbg"/>
+
+  <!-- Karakter jongkok (depan) -->
+  <g class="char-h">
+    <!-- Shadow -->
+    <ellipse cx="210" cy="308" rx="60" ry="9" fill="#000" opacity="0.2"/>
+    <!-- Kaki kiri: paha + betis -->
+    <line x1="195" y1="200" x2="155" y2="255" stroke="#1e2535" stroke-width="22" stroke-linecap="round"/>
+    <line x1="155" y1="255" x2="178" y2="295" stroke="#1e2535" stroke-width="20" stroke-linecap="round"/>
+    <!-- Kaki kanan -->
+    <line x1="225" y1="200" x2="265" y2="255" stroke="#1e2535" stroke-width="22" stroke-linecap="round"/>
+    <line x1="265" y1="255" x2="242" y2="295" stroke="#1e2535" stroke-width="20" stroke-linecap="round"/>
+    <!-- Sepatu -->
+    <rect x="158" y="290" width="32" height="16" rx="5" class="shh"/>
+    <rect x="228" y="290" width="32" height="16" rx="5" class="shh"/>
+    <!-- Lutut (bulat) -->
+    <circle cx="155" cy="255" r="12" fill="#1e2535"/>
+    <circle cx="265" cy="255" r="12" fill="#1e2535"/>
+    <!-- Torso (crouched) -->
+    <rect x="178" y="150" width="65" height="58" rx="10" class="unh"/>
+    <rect x="183" y="150" width="55" height="18" rx="4" class="undh"/>
+    <!-- Dasi -->
+    <polygon points="210,154 206,165 210,205 214,165" class="tih"/>
+    <!-- Badge -->
+    <rect x="183" y="160" width="16" height="16" rx="3" class="bah"/>
+    <text x="191" y="172" font-size="7" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="700">S</text>
+    <!-- Lengan kiri: naik ke atas kepala -->
+    <polyline points="178,162 140,130 195,108" stroke="#f0f0f0" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Lengan kanan -->
+    <polyline points="243,162 280,130 225,108" stroke="#f0f0f0" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Tangan di belakang kepala (visual gabungan) -->
+    <ellipse cx="210" cy="106" rx="20" ry="10" fill="#c8956c"/>
+    <!-- Leher -->
+    <rect x="202" y="120" width="16" height="20" rx="4" fill="#c8956c"/>
+    <!-- Kepala -->
+    <ellipse cx="210" cy="96" rx="34" ry="36" class="skh"/>
+    <!-- Telinga -->
+    <ellipse cx="176" cy="96" rx="7" ry="10" class="skh"/>
+    <ellipse cx="244" cy="96" rx="7" ry="10" class="skh"/>
+    <!-- Rambut -->
+    <ellipse cx="210" cy="62" rx="34" ry="13" fill="#2a1a0a"/>
+    <ellipse cx="177" cy="80" rx="8" ry="19" fill="#2a1a0a"/>
+    <ellipse cx="243" cy="80" rx="8" ry="19" fill="#2a1a0a"/>
+    <!-- Mata (capek/susah) -->
+    <ellipse cx="197" cy="90" rx="6" ry="6" fill="white"/>
+    <ellipse cx="223" cy="90" rx="6" ry="6" fill="white"/>
+    <ellipse cx="198" cy="91" rx="3.5" ry="4" fill="#1a1a2e"/>
+    <ellipse cx="224" cy="91" rx="3.5" ry="4" fill="#1a1a2e"/>
+    <!-- Alis berkerut -->
+    <path d="M190 82 Q197 78 203 82" stroke="#5a3a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M217 82 Q223 78 230 82" stroke="#5a3a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Mulut (capek) -->
+    <path d="M200 105 Q210 102 220 105" stroke="#8a5a3a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Keringat -->
+    <g class="sw1">
+      <ellipse cx="252" cy="74" rx="5" ry="7" fill="#60a5fa" opacity="0.7"/>
+      <polygon points="252,80 248,72 256,72" fill="#60a5fa" opacity="0.7"/>
+    </g>
+    <g class="sw2">
+      <ellipse cx="268" cy="86" rx="4" ry="6" fill="#60a5fa" opacity="0.6"/>
+      <polygon points="268,91 264,84 272,84" fill="#60a5fa" opacity="0.6"/>
+    </g>
+    <g class="sw3">
+      <ellipse cx="258" cy="62" rx="3" ry="5" fill="#60a5fa" opacity="0.5"/>
+      <polygon points="258,66 255,60 261,60" fill="#60a5fa" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Hitungan -->
+  <text x="370" y="180" fill="#60a5fa" font-family="Bebas Neue,sans-serif" font-size="48" text-anchor="middle" opacity="0.8">30x</text>
+  <text x="370" y="205" fill="#64748b" font-family="sans-serif" font-size="11" text-anchor="middle">Jongkok</text>
+
+  <!-- Label -->
+  <text x="200" y="358" fill="#60a5fa" font-family="sans-serif" font-size="10" font-weight="600" letter-spacing="2" text-anchor="middle">HUKUMAN FISIK</text>
+  <text x="200" y="373" fill="#64748b" font-family="sans-serif" font-size="9" text-anchor="middle">Jongkok, push-up, lari tanpa tujuan pedagogis</text>
+</svg>
+  </div>
+
+  <p class="reveal">Di sekolah, hukuman fisik dalam MPLS muncul dalam berbagai bentuk: push-up, lari, jongkok berjam-jam, atau kegiatan fisik yang membebani tanpa tujuan pedagogis jelas. KPAI dalam beberapa pernyataannya menyebut masih menemukan praktik kekerasan fisik dalam MPLS akibat normalisasi dan pewarisan tradisi dari tahun ke tahun. Komisioner KPAI Aris Adi Leksono menegaskan, MPLS bukan tempat pembenaran kekerasan berkedok kedisiplinan.</p>
+
+  <div class="case-box reveal">
+    <div class="case-title">Kasus: SMPN 3 Doko, Blitar (18 Juli 2025)</div>
+    <p>Seorang siswa baru berinisial WV yang baru berusia 12 tahun mengalami kekerasan fisik oleh sekitar 14 siswa dari berbagai kelas di area belakang kamar mandi sekolah pada hari terakhir MPLS. Korban mengalami luka memar dan trauma psikis.</p>
+  </div>
+
+  <div class="case-box reveal">
+    <div class="case-title">Kasus: SMPN 1 Ciambar, Sukabumi (2023)</div>
+    <p>Seorang siswa baru berinisial MA berusia 13 tahun ditemukan tewas tenggelam di Sungai Cileleuy. Insiden tersebut terjadi dari penyelenggaraan kegiatan oleh pihak panitia tanpa sepengetahuan sekolah, menunjukkan bagaimana kegiatan di luar kendali resmi guru bisa berujung fatal.</p>
+  </div>
+
+  <p class="reveal">Di kampus, hukuman fisik sering terjadi dalam skema yang lebih tidak terlihat karena tidak ada guru yang mengawasi langsung. Kasus yang paling banyak terdokumentasi terjadi di institusi pendidikan kedinasan, di mana budaya senioritas militeristik paling mengakar.</p>
+
+  <div class="case-box reveal">
+    <div class="case-title">Kasus Berulang: STIP Marunda Jakarta</div>
+    <p>Taruna tingkat 1 bernama Putu Satria Ananta Rustika berusia 19 tahun meninggal pada 3 Mei 2024 setelah dipukul oleh seniornya di bagian ulu hati. Kejadian bermula karena pelaku menganggap korban melanggar aturan berseragam. Dalam sidang tuntutan Januari 2025, jaksa menuntut pelaku utama 6 tahun penjara. Ini bukan yang pertama: sejak 2008, STIP Marunda sudah mencatat setidaknya enam kasus penganiayaan berujung kematian atau cedera serius, dengan motif yang berulang, yaitu senior merasa kurang dihormati oleh junior.</p>
+  </div>
+
+
+
+  <div class="case-box reveal">
+    <div class="case-title">Kasus: Mapala UII (Januari 2017)</div>
+    <p>Tiga mahasiswa tewas dalam diksar di lereng Gunung Lawu. Salah satu korban, Syaits Asyam, sempat mengaku kepada ibunya bahwa ia dipukul rotan, diinjak kakinya, dan disuruh mengangkat beban air dengan lehernya sebelum meninggal. Polisi melakukan rekonstruksi dengan 55 adegan.</p>
+  </div>
+
+  <!-- PILAR 2 -->
+  <div class="pilar-badge reveal">
+    <span class="num">02</span>
+    <span class="label">Atribut dan Tugas Aneh</span>
+  </div>
+
+  <p class="reveal">Di sekolah, ini hadir dalam bentuk yang sudah sangat dikenal: topi tempurung, kalung kerang, dasi kardus, kaus kaki beda warna, atau papan nama besar yang dikalungkan tali jemuran. Semua atribut ini dilarang secara eksplisit dalam Permendikdasmen No. 12 Tahun 2026 karena tidak berkorelasi dengan pemahaman lingkungan sekolah dan berpotensi menjadi bahan perundungan sosial.</p>
+
+  <!-- SVG KARAKTER INLINE -->
+  <div class="char-inline reveal">
+    <svg viewBox="0 0 420 480" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:320px">
+  <defs>
+    <style>
+      .svgbg{fill:var(--surface)}
+      .sk2{fill:#c8956c}.skd2{fill:#a0724d}.hf2{fill:#8b4513}
+      .la2{fill:#2d6a2d}.lb2{fill:#3d8a3d}.lc2{fill:#1a4a1a}
+      .tf2{fill:#d4a84b}.un2{fill:#f0f0f0}.und2{fill:#d0d0d0}
+      .ti2{fill:#1a3a6a}.sh2{fill:#2a2a2a}.ba2{fill:#cc3333}
+      @keyframes sw3a{0%,100%{transform:rotate(-2deg);transform-origin:210px 420px}50%{transform:rotate(2deg);transform-origin:210px 420px}}
+      @keyframes hw3a{0%,100%{transform:rotate(-3deg);transform-origin:210px 190px}50%{transform:rotate(3deg);transform-origin:210px 190px}}
+      @keyframes la3a{0%,100%{transform:rotate(-8deg);transform-origin:178px 140px}50%{transform:rotate(6deg);transform-origin:178px 140px}}
+      @keyframes la3b{0%,100%{transform:rotate(7deg);transform-origin:235px 118px}33%{transform:rotate(-10deg);transform-origin:235px 118px}}
+      @keyframes la3c{0%,100%{transform:rotate(0deg);transform-origin:200px 88px}50%{transform:rotate(13deg);transform-origin:200px 88px}}
+      @keyframes ts3{0%,100%{transform:rotate(-4deg);transform-origin:210px 308px}50%{transform:rotate(4deg);transform-origin:210px 308px}}
+      @keyframes bl3{0%,88%,100%{transform:scaleY(1)}93%,96%{transform:scaleY(0.08)}}
+      .cb3{animation:sw3a 3s ease-in-out infinite}
+      .hg3{animation:hw3a 3s ease-in-out infinite}
+      .lA3{animation:la3a 2.1s ease-in-out infinite}
+      .lB3{animation:la3b 1.8s ease-in-out infinite .3s}
+      .lC3{animation:la3c 2.4s ease-in-out infinite .6s}
+      .tg3{animation:ts3 2.5s ease-in-out infinite}
+      .el3{animation:bl3 4s ease-in-out infinite;transform-origin:193px 240px}
+      .er3{animation:bl3 4s ease-in-out infinite .08s;transform-origin:227px 240px}
+    </style>
+  </defs>
+  <rect width="420" height="480" class="svgbg"/>
+  <ellipse cx="210" cy="428" rx="75" ry="11" fill="#000" opacity="0.15"/>
+  <g class="cb3">
+    <rect x="185" y="350" width="22" height="62" rx="6" fill="#1e2535"/>
+    <rect x="213" y="350" width="22" height="62" rx="6" fill="#1e2535"/>
+    <rect x="178" y="398" width="30" height="16" rx="5" class="sh2"/>
+    <rect x="210" y="398" width="30" height="16" rx="5" class="sh2"/>
+    <rect x="168" y="270" width="84" height="88" rx="9" class="un2"/>
+    <rect x="173" y="270" width="74" height="20" rx="4" class="und2"/>
+    <polygon points="210,275 205,288 210,350 215,288" class="ti2"/>
+    <rect x="173" y="280" width="18" height="18" rx="3" class="ba2"/>
+    <text x="182" y="292" font-size="7" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="700">S</text>
+    <rect x="146" y="276" width="20" height="60" rx="8" class="un2"/>
+    <ellipse cx="156" cy="340" rx="10" ry="12" class="sk2"/>
+    <rect x="254" y="272" width="20" height="60" rx="8" class="un2" transform="rotate(8 264 272)"/>
+    <ellipse cx="268" cy="336" rx="10" ry="12" class="sk2" transform="rotate(8 268 336)"/>
+    <rect x="201" y="250" width="18" height="26" rx="4" class="sk2"/>
+    <ellipse cx="210" cy="230" rx="36" ry="40" class="sk2"/>
+    <ellipse cx="174" cy="230" rx="8" ry="11" class="sk2"/>
+    <ellipse cx="246" cy="230" rx="8" ry="11" class="sk2"/>
+    <g class="el3">
+      <ellipse cx="193" cy="224" rx="6.5" ry="7.5" fill="white"/>
+      <ellipse cx="194" cy="225" rx="3.5" ry="4.5" fill="#1a1a2e"/>
+      <ellipse cx="195" cy="223" rx="1.3" ry="1.3" fill="white"/>
+    </g>
+    <g class="er3">
+      <ellipse cx="227" cy="224" rx="6.5" ry="7.5" fill="white"/>
+      <ellipse cx="228" cy="225" rx="3.5" ry="4.5" fill="#1a1a2e"/>
+      <ellipse cx="229" cy="223" rx="1.3" ry="1.3" fill="white"/>
+    </g>
+    <path d="M186 215 Q194 210 200 214" stroke="#5a3a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M220 214 Q226 210 234 215" stroke="#5a3a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <ellipse cx="210" cy="238" rx="4" ry="3" class="skd2" opacity="0.5"/>
+    <path d="M200 248 Q210 255 220 248" stroke="#8a5a3a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <ellipse cx="210" cy="193" rx="36" ry="13" fill="#2a1a0a"/>
+    <ellipse cx="175" cy="214" rx="9" ry="21" fill="#2a1a0a"/>
+    <ellipse cx="245" cy="214" rx="9" ry="21" fill="#2a1a0a"/>
+    <g class="tg3">
+      <path d="M200 252 Q194 272 182 284 Q174 294 178 303 Q182 312 210 312" stroke="#8a7050" stroke-width="1.4" fill="none"/>
+      <path d="M220 252 Q226 272 238 284 Q246 294 242 303 Q238 312 210 312" stroke="#8a7050" stroke-width="1.4" fill="none"/>
+      <rect x="168" y="310" width="85" height="62" rx="4" class="tf2"/>
+      <rect x="168" y="310" width="85" height="62" rx="4" fill="none" stroke="#a07830" stroke-width="1.4"/>
+      <circle cx="210" cy="312" r="3.5" fill="#a07830"/>
+      <text x="210" y="328" fill="#3a2000" font-family="monospace" font-weight="700" font-size="8" text-anchor="middle">NAMA LENGKAP</text>
+      <text x="210" y="341" fill="#3a2000" font-family="monospace" font-weight="700" font-size="7" text-anchor="middle">KELAS / JURUSAN</text>
+      <text x="210" y="353" fill="#3a2000" font-family="monospace" font-weight="700" font-size="7" text-anchor="middle">ASAL SEKOLAH</text>
+      <text x="210" y="363" fill="#3a2000" font-family="monospace" font-weight="700" font-size="7" text-anchor="middle">NO. TELP ORTU</text>
+    </g>
+    <g class="hg3">
+      <ellipse cx="210" cy="193" rx="46" ry="9" fill="#8b4513" stroke="#6b3410" stroke-width="1"/>
+      <polygon points="210,42 164,193 256,193" fill="#8b4513"/>
+      <polygon points="210,42 164,193 256,193" fill="none" stroke="#6b3410" stroke-width="1"/>
+      <circle cx="210" cy="42" r="4.5" fill="#60a5fa" opacity="0.9"/>
+      <g class="lA3">
+        <ellipse cx="178" cy="148" rx="22" ry="9" fill="#3d8a3d" transform="rotate(-42 178 148)"/>
+        <ellipse cx="178" cy="148" rx="20" ry="7" fill="#2d6a2d" transform="rotate(-42 178 148)"/>
+      </g>
+      <g class="lB3">
+        <ellipse cx="235" cy="128" rx="24" ry="9" fill="#3d8a3d" transform="rotate(32 235 128)"/>
+        <ellipse cx="235" cy="128" rx="22" ry="7" fill="#2d6a2d" transform="rotate(32 235 128)"/>
+      </g>
+      <g class="lC3">
+        <ellipse cx="200" cy="100" rx="18" ry="8" fill="#3d8a3d" transform="rotate(-15 200 100)"/>
+        <ellipse cx="200" cy="100" rx="16" ry="6" fill="#1a4a1a" transform="rotate(-15 200 100)"/>
+      </g>
+      <ellipse cx="162" cy="175" rx="13" ry="5" fill="#2d6a2d" transform="rotate(-58 162 175)"/>
+      <ellipse cx="248" cy="162" rx="13" ry="5" fill="#3d8a3d" transform="rotate(48 248 162)"/>
+    </g>
+  </g>
+  <text x="210" y="454" fill="#60a5fa" font-family="sans-serif" font-size="10" font-weight="600" letter-spacing="2" text-anchor="middle">ATRIBUT TIDAK RELEVAN</text>
+  <text x="210" y="470" fill="#64748b" font-family="sans-serif" font-size="9" text-anchor="middle">Topi lancip berdaun · Kalung name tag kardus</text>
+</svg>
+  </div>
+
+  <p class="reveal">Di kampus, bentuknya berevolusi menjadi lebih modern. Salah satu yang kini sering muncul adalah kewajiban membuat video perkenalan yang diunggah ke media sosial pribadi mahasiswa baru, lengkap dengan syarat frame tertentu, hashtag, dan tag akun kampus. Varian lainnya adalah twibbon, yaitu template foto bingkai yang dipakai beramai-ramai sebagai penanda identitas maba, yang kini juga sering diwajibkan sebagai syarat orientasi.</p>
+
+  <p class="reveal">Masalahnya berlapis. Pertama, tidak ada tujuan pedagogis yang jelas. Kedua, tidak ada ketentuan seperti apa foto atau videonya seharusnya. Tanpa panduan yang jelas, hasilnya bisa sangat beragam, dan ini terbukti dari maraknya foto twibbon yang belakangan tampil dengan gaya tidak sesuai, tidak pantas, bahkan vulgar, yang justru mencoreng nama institusi itu sendiri. Ketiga, dan ini yang paling serius: konten yang diunggah ke media sosial bisa dilihat siapa saja di seluruh dunia, bukan hanya civitas kampus. Mahasiswa yang tidak nyaman tampil di depan kamera berisiko menjadi korban <em>cyberbullying</em> dalam skala yang jauh melampaui perundungan di lingkup kampus biasa. Tidak semua orang bisa dan ingin menjadi konten kreator, dan memaksakan itu sebagai syarat orientasi bukan hanya tidak relevan, tapi berpotensi merugikan secara psikologis.</p>
+
+  <!-- PILAR 3 -->
+  <div class="pilar-badge reveal">
+    <span class="num">03</span>
+    <span class="label">Perburuan Tanda Tangan Senior</span>
+  </div>
+
+  <div class="char-inline reveal">
+    <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:360px">
+  <defs>
+    <style>
+      .svgbg{fill:var(--surface)}
+      .skt{fill:#c8956c}.skdt{fill:#a0724d}.unt{fill:#f0f0f0}.undt{fill:#d0d0d0}
+      .tit{fill:#1a3a6a}.sht{fill:#2a2a2a}.bat{fill:#cc3333}
+      .uns{fill:#2a3a5a}.unsd{fill:#1e2d48}
+      @keyframes maba-walk{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+      @keyframes senior-sway{0%,100%{transform:rotate(-1deg);transform-origin:330px 380px}50%{transform:rotate(1deg);transform-origin:330px 380px}}
+      @keyframes paper-shake{0%,100%{transform:rotate(-3deg);transform-origin:150px 260px}50%{transform:rotate(3deg);transform-origin:150px 260px}}
+      @keyframes bubble{0%,70%,100%{opacity:0;transform:translateY(0)}80%{opacity:1}95%{opacity:0;transform:translateY(-10px)}}
+      @keyframes blt{0%,88%,100%{transform:scaleY(1)}93%,96%{transform:scaleY(0.08)}}
+      .maba-g{animation:maba-walk 1.2s ease-in-out infinite}
+      .senior-g{animation:senior-sway 3s ease-in-out infinite}
+      .paper-g{animation:paper-shake 1.2s ease-in-out infinite}
+      .bubble1{animation:bubble 3s ease-in-out infinite}
+      .bubble2{animation:bubble 3s ease-in-out infinite 1.5s}
+      .el-m{animation:blt 3s ease-in-out infinite;transform-origin:148px 185px}
+      .er-m{animation:blt 3s ease-in-out infinite .08s;transform-origin:172px 185px}
+    </style>
+  </defs>
+  <rect width="480" height="420" class="svgbg"/>
+
+  <!-- Garis pemisah (antrian) -->
+  <line x1="240" y1="120" x2="240" y2="390" stroke="#2563eb" stroke-width="1" stroke-dasharray="6,4" opacity="0.3"/>
+  <text x="240" y="115" fill="#64748b" font-family="sans-serif" font-size="9" text-anchor="middle">Senior</text>
+
+  <!-- MABA (kiri, nervous) -->
+  <g class="maba-g">
+    <!-- Shadow -->
+    <ellipse cx="155" cy="388" rx="45" ry="8" fill="#000" opacity="0.15"/>
+    <!-- Kaki -->
+    <rect x="138" y="320" width="16" height="55" rx="5" fill="#1e2535"/>
+    <rect x="158" y="320" width="16" height="55" rx="5" fill="#1e2535"/>
+    <rect x="132" y="362" width="24" height="14" rx="4" class="sht"/>
+    <rect x="156" y="362" width="24" height="14" rx="4" class="sht"/>
+    <!-- Torso -->
+    <rect x="128" y="232" width="58" height="94" rx="9" class="unt"/>
+    <rect x="133" y="232" width="48" height="18" rx="4" class="undt"/>
+    <polygon points="157,236 153,246 157,322 161,246" class="tit"/>
+    <rect x="133" y="242" width="14" height="14" rx="3" class="bat"/>
+    <text x="140" y="252" font-size="6" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="700">S</text>
+    <!-- Lengan kiri -->
+    <rect x="108" y="238" width="18" height="52" rx="7" class="unt"/>
+    <ellipse cx="117" cy="293" rx="9" ry="10" class="skt"/>
+    <!-- Lengan kanan (memegang kertas) -->
+    <rect x="188" y="235" width="18" height="52" rx="7" class="unt" transform="rotate(-12 197 235)"/>
+    <ellipse cx="200" cy="287" rx="9" ry="10" class="skt" transform="rotate(-12 200 287)"/>
+    <!-- Kertas/buku tanda tangan -->
+    <g class="paper-g">
+      <rect x="195" y="255" width="45" height="58" rx="4" fill="#fffde7" stroke="#d4a84b" stroke-width="1.5"/>
+      <line x1="202" y1="268" x2="232" y2="268" stroke="#ccc" stroke-width="1"/>
+      <line x1="202" y1="278" x2="232" y2="278" stroke="#ccc" stroke-width="1"/>
+      <line x1="202" y1="288" x2="232" y2="288" stroke="#ccc" stroke-width="1"/>
+      <line x1="202" y1="298" x2="228" y2="298" stroke="#ccc" stroke-width="1"/>
+      <text x="217" y="264" fill="#aaa" font-family="monospace" font-size="6" text-anchor="middle">TTD</text>
+    </g>
+    <!-- Leher -->
+    <rect x="149" y="212" width="16" height="24" rx="4" class="skt"/>
+    <!-- Kepala (lebih kecil dari senior) -->
+    <ellipse cx="157" cy="194" rx="30" ry="32" class="skt"/>
+    <!-- Rambut -->
+    <ellipse cx="157" cy="165" rx="30" ry="12" fill="#2a1a0a"/>
+    <ellipse cx="128" cy="182" rx="7" ry="17" fill="#2a1a0a"/>
+    <ellipse cx="186" cy="182" rx="7" ry="17" fill="#2a1a0a"/>
+    <!-- Telinga -->
+    <ellipse cx="127" cy="194" rx="6" ry="9" class="skt"/>
+    <ellipse cx="187" cy="194" rx="6" ry="9" class="skt"/>
+    <!-- Mata (nervous) -->
+    <g class="el-m">
+      <ellipse cx="148" cy="188" rx="6" ry="7" fill="white"/>
+      <ellipse cx="149" cy="189" rx="4" ry="5" fill="#1a1a2e"/>
+    </g>
+    <g class="er-m">
+      <ellipse cx="172" cy="188" rx="6" ry="7" fill="white"/>
+      <ellipse cx="173" cy="189" rx="4" ry="5" fill="#1a1a2e"/>
+    </g>
+    <!-- Alis terangkat (nervous) -->
+    <path d="M142 179 Q148 174 154 178" stroke="#5a3a1a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M166 178 Q172 174 178 179" stroke="#5a3a1a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Mulut (sedikit terbuka, nervous) -->
+    <ellipse cx="157" cy="205" rx="6" ry="4" fill="#8a5a3a" opacity="0.5"/>
+    <!-- Bubble pikiran maba -->
+    <g class="bubble1">
+      <rect x="60" y="130" width="70" height="28" rx="8" fill="#1a2035" stroke="#2563eb" stroke-width="1"/>
+      <text x="95" y="144" fill="#94a3b8" font-family="sans-serif" font-size="8.5" text-anchor="middle">Minta TTD...</text>
+      <polygon points="95,158 88,165 102,165" fill="#1a2035" stroke="#2563eb" stroke-width="1"/>
+    </g>
+    <g class="bubble2">
+      <rect x="50" y="158" width="82" height="24" rx="7" fill="#1a2035" stroke="#2563eb" stroke-width="1" opacity="0.8"/>
+      <text x="91" y="173" fill="#64748b" font-family="sans-serif" font-size="7.5" text-anchor="middle">Disuruh apa dulu?</text>
+    </g>
+  </g>
+
+  <!-- Panah arah mendekati -->
+  <line x1="218" y1="280" x2="258" y2="280" stroke="#2563eb" stroke-width="2" stroke-dasharray="4,3" opacity="0.5" marker-end="url(#arrttd)"/>
+  <defs>
+    <marker id="arrttd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- SENIOR (kanan, confident/arms crossed) -->
+  <g class="senior-g">
+    <!-- Shadow -->
+    <ellipse cx="335" cy="388" rx="50" ry="8" fill="#000" opacity="0.15"/>
+    <!-- Kaki -->
+    <rect x="316" y="315" width="18" height="65" rx="6" fill="#1e2535"/>
+    <rect x="340" y="315" width="18" height="65" rx="6" fill="#1e2535"/>
+    <rect x="308" y="366" width="28" height="16" rx="5" class="sht"/>
+    <rect x="338" y="366" width="28" height="16" rx="5" class="sht"/>
+    <!-- Torso (lebih besar/tinggi) -->
+    <rect x="302" y="218" width="68" height="104" rx="10" class="uns"/>
+    <rect x="307" y="218" width="58" height="20" rx="5" class="unsd"/>
+    <!-- Lengan silang (crossed arms) -->
+    <rect x="280" y="235" width="22" height="62" rx="9" class="uns" transform="rotate(15 291 235)"/>
+    <rect x="370" y="232" width="22" height="62" rx="9" class="uns" transform="rotate(-15 381 232)"/>
+    <!-- Lengan forearm silang -->
+    <rect x="296" y="272" width="82" height="18" rx="9" class="uns" transform="rotate(-8 337 281)"/>
+    <rect x="296" y="285" width="82" height="18" rx="9" class="uns" transform="rotate(8 337 294)"/>
+    <!-- Leher -->
+    <rect x="327" y="198" width="18" height="26" rx="5" class="skt"/>
+    <!-- Kepala (lebih besar) -->
+    <ellipse cx="336" cy="180" rx="36" ry="38" class="skt"/>
+    <!-- Rambut -->
+    <ellipse cx="336" cy="146" rx="36" ry="14" fill="#1a0a00"/>
+    <ellipse cx="300" cy="166" rx="8" ry="20" fill="#1a0a00"/>
+    <ellipse cx="372" cy="166" rx="8" ry="20" fill="#1a0a00"/>
+    <!-- Telinga -->
+    <ellipse cx="300" cy="180" rx="8" ry="11" class="skt"/>
+    <ellipse cx="372" cy="180" rx="8" ry="11" class="skt"/>
+    <!-- Mata (keren/cuek) -->
+    <ellipse cx="322" cy="175" rx="7" ry="5" fill="white"/>
+    <ellipse cx="350" cy="175" rx="7" ry="5" fill="white"/>
+    <ellipse cx="323" cy="175" rx="4" ry="4" fill="#1a1a2e"/>
+    <ellipse cx="351" cy="175" rx="4" ry="4" fill="#1a1a2e"/>
+    <!-- Alis senior (tegas) -->
+    <path d="M315 166 Q322 162 329 165" stroke="#3a2a10" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M343 165 Q350 162 357 166" stroke="#3a2a10" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Hidung -->
+    <ellipse cx="336" cy="187" rx="4" ry="3" class="skdt" opacity="0.5"/>
+    <!-- Mulut datar (cuek) -->
+    <line x1="326" y1="198" x2="346" y2="198" stroke="#8a5a3a" stroke-width="2" stroke-linecap="round"/>
+    <!-- Badge senior/OSIS -->
+    <rect x="307" y="230" width="20" height="20" rx="4" fill="#e87722"/>
+    <text x="317" y="243" font-size="7" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="700">OS</text>
+  </g>
+
+  <!-- Label -->
+  <text x="240" y="402" fill="#60a5fa" font-family="sans-serif" font-size="10" font-weight="600" letter-spacing="2" text-anchor="middle">PERBURUAN TANDA TANGAN</text>
+  <text x="240" y="417" fill="#64748b" font-family="sans-serif" font-size="9" text-anchor="middle">Maba wajib kumpulkan TTD senior tanpa tujuan jelas</text>
+</svg>
+  </div>
+
+  <p class="reveal">Ini salah satu tradisi paling tua yang bertahan di ospek kampus. Alasannya selalu sama: biar kenalan sama senior. Maba diwajibkan mengumpulkan tanda tangan dari sejumlah senior sebagai syarat kelulusan ospek.</p>
+
+  <p class="reveal">Masalah pertama adalah logika dasarnya tidak konsisten. Kalau tujuannya memang perkenalan, ada cara yang jauh lebih langsung: memperkenalkan senior kepada maba di acara resmi ospek itu sendiri, bukan membebankan maba untuk mencari satu per satu senior yang bahkan belum mereka kenal wajahnya.</p>
+
+  <p class="reveal">Masalah kedua, tanda tangan tidak pernah benar-benar diberikan begitu saja. Dalam sejumlah kasus yang beredar di kalangan mahasiswa, maba diminta bernyanyi di depan kantin, menirukan gaya tertentu, atau mendekati senior yang sedang beraktivitas di situasi yang berpotensi memicu respons negatif. Ketika respons itu datang dalam bentuk kemarahan atau tindakan fisik, maba berada dalam posisi yang tidak punya pilihan: kegiatan itu wajib, tanda tangan harus terkumpul, dan tidak ada mekanisme pengaduan yang jelas.</p>
+
+  <h2 class="section-heading reveal">Membongkar Argumen "Melatih Mental untuk Dunia Kerja"</h2>
+
+  <p class="reveal">Pembelaan yang paling sering terdengar dari senior yang mempertahankan praktik-praktik di atas adalah: dunia kerja nanti jauh lebih parah, jadi ini melatih mental dari sekarang. Argumen ini punya dua kelemahan mendasar.</p>
+
+  <p class="reveal">Pertama, secara psikologis, ada fenomena yang dikenal sebagai <em>severity-attraction effect</em>: orang yang melewati proses inisiasi berat cenderung menilai kelompoknya lebih berharga setelahnya, bukan karena inisiasinya memang efektif melatih sesuatu, tapi karena otak manusia butuh membenarkan penderitaan yang sudah dijalani. Ini adalah penjelasan yang jauh lebih masuk akal tentang kenapa senior percaya cara ini berhasil pada diri mereka sendiri.</p>
+
+<div class="char-inline reveal" style="margin:2rem 0">
+<svg viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:560px">
+<defs>
+  <style>
+    .svgbg{fill:var(--surface)}
+    .myth-bg{fill:rgba(220,50,50,0.07)}
+    .fact-bg{fill:rgba(37,99,235,0.07)}
+    .myth-head{fill:#dc3545;font-family:"DM Sans",sans-serif;font-weight:700;font-size:11px;letter-spacing:2px}
+    .fact-head{fill:var(--accent2);font-family:"DM Sans",sans-serif;font-weight:700;font-size:11px;letter-spacing:2px}
+    .myth-text{fill:var(--text);font-family:"Source Serif 4",sans-serif;font-size:11.5px}
+    .fact-text{fill:var(--text);font-family:"Source Serif 4",sans-serif;font-size:11.5px}
+    .row-line{stroke:var(--border);stroke-width:1}
+    .center-line{stroke:var(--border);stroke-width:1.5}
+    .vs-badge{fill:var(--surface2);stroke:var(--border);stroke-width:1}
+    .vs-text{fill:var(--text-faint);font-family:"DM Sans",sans-serif;font-weight:700;font-size:11px;text-anchor:middle}
+    .icon-myth{fill:#dc3545;font-family:"DM Sans",sans-serif;font-size:14px;font-weight:700}
+    .icon-fact{fill:var(--accent2);font-family:"DM Sans",sans-serif;font-size:14px;font-weight:700}
+  </style>
+</defs>
+<rect width="560" height="340" class="svgbg" rx="12"/>
+<rect width="560" height="340" rx="12" fill="none" stroke="var(--border)" stroke-width="1"/>
+
+<!-- Header -->
+<rect x="0" y="0" width="560" height="38" fill="var(--surface2)" rx="12"/>
+<rect x="0" y="26" width="560" height="12" fill="var(--surface2)"/>
+<text x="140" y="24" class="myth-head" text-anchor="middle">KLAIM SENIOR</text>
+<text x="420" y="24" class="fact-head" text-anchor="middle">FAKTANYA</text>
+
+<!-- Garis tengah -->
+<line x1="280" y1="38" x2="280" y2="340" class="center-line"/>
+
+<!-- Row backgrounds -->
+<rect x="1" y="38" width="278" height="100" class="myth-bg"/>
+<rect x="281" y="38" width="278" height="100" class="fact-bg"/>
+<rect x="1" y="138" width="278" height="100" class="myth-bg"/>
+<rect x="281" y="138" width="278" height="100" class="fact-bg"/>
+<rect x="1" y="238" width="278" height="101" class="myth-bg"/>
+<rect x="281" y="238" width="278" height="101" class="fact-bg"/>
+
+<!-- Row dividers -->
+<line x1="0" y1="138" x2="560" y2="138" class="row-line"/>
+<line x1="0" y1="238" x2="560" y2="238" class="row-line"/>
+
+<!-- VS badges -->
+<ellipse cx="280" cy="88" rx="16" ry="14" class="vs-badge"/>
+<text x="280" y="93" class="vs-text">VS</text>
+<ellipse cx="280" cy="188" rx="16" ry="14" class="vs-badge"/>
+<text x="280" y="193" class="vs-text">VS</text>
+<ellipse cx="280" cy="288" rx="16" ry="14" class="vs-badge"/>
+<text x="280" y="293" class="vs-text">VS</text>
+
+<!-- Row 1 -->
+<text x="24" y="65" class="icon-myth">✕</text>
+<text x="44" y="64" class="myth-text" font-weight="600">Melatih mental</text>
+<text x="44" y="80" class="myth-text" font-weight="600">untuk dunia kerja</text>
+<text x="44" y="100" class="myth-text" style="font-size:10.5px;fill:var(--text-muted)">Yang bilang ini belum</text>
+<text x="44" y="115" class="myth-text" style="font-size:10.5px;fill:var(--text-muted)">pernah bekerja</text>
+
+<text x="297" y="65" class="icon-fact">✓</text>
+<text x="315" y="64" class="fact-text" font-weight="600">Dunia kerja tidak</text>
+<text x="315" y="80" class="fact-text" font-weight="600">punya tradisi ini</text>
+<text x="315" y="100" class="fact-text" style="font-size:10.5px;fill:var(--text-muted)">Klaim tanpa dasar dari</text>
+<text x="315" y="115" class="fact-text" style="font-size:10.5px;fill:var(--text-muted)">orang tanpa pengalaman</text>
+
+<!-- Row 2 -->
+<text x="24" y="165" class="icon-myth">✕</text>
+<text x="44" y="164" class="myth-text" font-weight="600">Biar kenalan</text>
+<text x="44" y="180" class="myth-text" font-weight="600">sama senior</text>
+<text x="44" y="200" class="myth-text" style="font-size:10.5px;fill:var(--text-muted)">Tapi maba diminta</text>
+<text x="44" y="215" class="myth-text" style="font-size:10.5px;fill:var(--text-muted)">"tugas dulu" sebelum TTD</text>
+
+<text x="297" y="165" class="icon-fact">✓</text>
+<text x="315" y="164" class="fact-text" font-weight="600">Perkenalan bisa</text>
+<text x="315" y="180" class="fact-text" font-weight="600">dilakukan langsung</text>
+<text x="315" y="200" class="fact-text" style="font-size:10.5px;fill:var(--text-muted)">Di acara resmi, tanpa</text>
+<text x="315" y="215" class="fact-text" style="font-size:10.5px;fill:var(--text-muted)">perburuan atau syarat aneh</text>
+
+<!-- Row 3 -->
+<text x="24" y="265" class="icon-myth">✕</text>
+<text x="44" y="264" class="myth-text" font-weight="600">Sudah tradisi,</text>
+<text x="44" y="280" class="myth-text" font-weight="600">dulu gua juga begini</text>
+<text x="44" y="300" class="myth-text" style="font-size:10.5px;fill:var(--text-muted)">Siklus tanpa evaluasi</text>
+<text x="44" y="315" class="myth-text" style="font-size:10.5px;fill:var(--text-muted)">apakah bermanfaat</text>
+
+<text x="297" y="265" class="icon-fact">✓</text>
+<text x="315" y="264" class="fact-text" font-weight="600">Tradisi yang menyakiti</text>
+<text x="315" y="280" class="fact-text" font-weight="600">wajib dihentikan</text>
+<text x="315" y="300" class="fact-text" style="font-size:10.5px;fill:var(--text-muted)">Pola diwariskan bukan</text>
+<text x="315" y="315" class="fact-text" style="font-size:10.5px;fill:var(--text-muted)">karena efektif, tapi karena</text>
+</svg>
+</div>
+
+  <p class="reveal">Kedua, ada perbedaan besar antara melatih ketahanan mental yang sesungguhnya dengan perpeloncoan. Pelatihan ketahanan yang dirancang dengan baik sifatnya terstruktur, bertahap, ada dukungan, dan pesertanya memahami tujuannya. Hukuman fisik acak, tugas absurd, atau perburuan tanda tangan tanpa penjelasan adalah kebalikan dari semua itu.</p>
+
+  <p class="reveal">Ada satu hal sederhana yang sering terlewat: yang mengucapkan argumen "dunia kerja lebih parah" biasanya adalah mahasiswa tingkat dua atau tiga yang belum pernah bekerja sama sekali. Klaim tersebut kemungkinan besar hanya diwariskan dari senior mereka, yang mungkin juga belum pernah memverifikasinya dari pengalaman nyata. Ini rantai klaim tanpa sumber yang tidak pernah benar-benar diuji oleh siapa pun dalam rantai tersebut.</p>
+
+  <h2 class="section-heading reveal">Di Luar Negeri Kondisinya Lebih Baik?</h2>
+
+  <p class="reveal">Ada satu asumsi yang perlu dibongkar sebelum lanjut, dan ini yang paling gampang muncul di kepala pembaca. Setelah membaca soal <em>ontgroening</em> di Belanda atau hazing di kampus Amerika, rasanya enak sekali menyimpulkan: oh, di luar negeri sudah beradab. Orientasi kampus mereka manusiawi, tertib, dijalankan orang-orang dewasa yang tahu batas. Indonesia? Masih zaman batu. Masih feodal. Belum move on dari mental jajahan.</p>
+
+  <p class="reveal">Simpulan itu bukan cuma keliru, tapi enak dipercaya padahal salah arah. Ia bikin kita merasa lebih baik tentang diri sendiri secara instan: ya kita memang belum semaju itu, selesai, tidak perlu introspeksi lebih jauh. Padahal kenyataannya jauh lebih sederhana dan justru lebih bisa diperbaiki: ini bukan soal bangsa yang belum maju, tapi soal aturan yang lemah pengawasannya dan institusi yang terlalu mudah lepas tangan dengan kata oknum.</p>
+
+  <div class="case-box reveal">
+    <div class="case-title">Robert Champion, FAMU Amerika Serikat (November 2011)</div>
+    <p>Drum major band universitas FAMU di Florida tewas dalam ritual hazing yang disebut "Crossing Bus C": ia harus melewati lorong bus gelap sambil dipukuli sesama anggota band menggunakan tinju, tongkat, sabuk, dan sisir besar. Ritual itu sudah berlangsung lebih dari 50 tahun sebelum akhirnya memakan korban jiwa. Dante Martin, yang dianggap sebagai pemimpin ritual, divonis lebih dari 6 tahun penjara pada 2015.</p>
+    <p class="reveal"><a href="https://abcnews.go.com/US/hazing-assault-famu-drum-major-robert-champion-detailed/story?id=16415215" target="_blank" style="color:var(--accent2);font-size:.82rem">Baca selengkapnya di ABC News →</a></p>
+  </div>
+
+  <div class="case-box reveal">
+    <div class="case-title">Sanda Dia, KU Leuven Belgia (Desember 2018)</div>
+    <p>Mahasiswa teknik berusia 20 tahun meninggal setelah ritual inisiasi fraternity Reuzegom selama dua hari: dipaksa menelan ikan mas hidup, minum banyak saus ikan dan alkohol, lalu berdiri dalam lubang berisi air es. Ia meninggal akibat kegagalan organ ganda.</p>
+    <p>Yang membuat kasus ini makin menonjol adalah konteks sosialnya: Reuzegom adalah fraternity elite yang anggotanya sebagian besar merupakan putra-putra hakim, politisi, CEO, dan tokoh berpengaruh Belgia. Sanda sendiri anak pertama keluarganya yang masuk universitas. Karena konflik kepentingan itulah, kasusnya bahkan harus dipindahkan ke jaksa kota lain. Mungkin narasi ini sudah familiar: <em>"Di luar negeri hukumnya tegas, beda sama Indonesia."</em> Kenyataannya, di Belgia, 18 orang yang membunuh seseorang cukup bayar denda €400 dan kerja sosial, karena ayah mereka hakim dan politisi.</p>
+    <div class="article-note reveal" style="border-left:3px solid var(--accent);border-radius:0 8px 8px 0;background:var(--accent-dim)">
+      Kalau kamu berpikir bahwa <em>class justice</em> adalah cerminan ketertinggalan Indonesia semata, kamu mungkin sedang terjebak dalam pola yang pernah KBDI bahas: kita cenderung melihat berita buruk tentang negeri sendiri jauh lebih banyak dari yang sebenarnya proporsional. &nbsp;<a href="https://edukbdi.github.io/beritanegatif/" target="_blank" style="color:var(--accent2);font-weight:600">Baca: Mengapa Berita Indonesia Selalu Negatif? →</a>
+    </div>
+    <p>Vonis itu memicu protes besar di seluruh Eropa. Demonstran membawa spanduk "Stop melindungi elite putih." Media menyebutnya <em>class justice</em>: di negara yang sama, seseorang dihukum 7 bulan penjara karena mencuri sepatu seharga €125. Tidak satu pun anggota Reuzegom pernah meminta maaf kepada keluarga Sanda.</p>
+    <p><a href="https://en.wikipedia.org/wiki/Death_of_Sanda_Dia" target="_blank" style="color:var(--accent2);font-size:.82rem">Wikipedia →</a> &nbsp;·&nbsp; <a href="https://www.bbc.com/news/world-europe-65767457" target="_blank" style="color:var(--accent2);font-size:.82rem">BBC News →</a></p>
+  </div>
+
+  <div class="case-box reveal">
+    <div class="case-title">Prancis: Dikriminalisasi Sejak 1998, Tapi Masih Terjadi (2024)</div>
+    <p>Survei 2024 terhadap 4.000 mahasiswa Prancis menemukan 11 persen melaporkan mengalami hazing, dengan angka tertinggi 15 persen di sekolah kedokteran dan 13,8 persen di grandes écoles. Dari korban tersebut, 66,4 persen mengalami praktik merendahkan seperti zat menjijikkan yang dilempar ke tubuh mereka dan dipaksa makan makanan ekstrem. Prancis mengkriminalisasi hazing atau bizutage sejak 1998 dengan ancaman enam bulan penjara dan denda €7.500. Bahwa angkanya masih setinggi itu dua puluh enam tahun setelah pelarangan menunjukkan bahwa instrumen hukum saja tidak cukup tanpa pengawasan dan budaya yang berubah.</p>
+    <p class="reveal"><a href="https://www.service-public.fr/particuliers/vosdroits/F2275" target="_blank" style="color:var(--accent2);font-size:.82rem">Regulasi bizutage di Service-Public.fr →</a></p>
+  </div>
+
+  <div class="case-box reveal">
+    <div class="case-title">Northwestern University, Amerika Serikat (2023)</div>
+    <p>Skandal hazing di program football Northwestern University, salah satu universitas riset terkemuka di AS, terungkap pada Juli 2023. Lebih dari 14 atlet melaporkan adanya ritual merendahkan yang disebut "running", bersifat fisik dan seksual, yang berlangsung selama bertahun-tahun. Satu pemain voli perempuan mengalami cedera fisik hingga membutuhkan penanganan medis. Pelatih kepala Pat Fitzgerald dipecat setelah 17 tahun menjabat karena dianggap bertanggung jawab atas budaya ini. Universitas menyelesaikan seluruh gugatan dari para pemain pada 2025. Kasus ini membuktikan bahwa bahkan kampus elite bergengsi sekalipun tidak kebal dari budaya perpeloncoan yang mengakar.</p>
+    <p class="reveal"><a href="https://www.washingtonpost.com/sports/2023/08/02/northwest-hazing-scandal-lawsuit-allegations/" target="_blank" style="color:var(--accent2);font-size:.82rem">Baca selengkapnya di Washington Post →</a></p>
+  </div>
+
+  <p class="reveal">Yang membedakan bukan ada atau tidaknya masalah, karena masalah ini ada di mana-mana. Yang membedakan adalah seberapa serius kerangka hukum yang dibangun untuk melawannya, seberapa tegas penegakannya, dan seberapa cepat institusi mau mengakui ini sebagai masalah struktural. Di sisi itu, kasus STIP Marunda yang berulang setidaknya enam kali sejak 2008 dengan vonis yang relatif ringan dibanding Filipina atau Korea menunjukkan bahwa pengakuan struktural itu belum sepenuhnya terjadi.</p>
+
+  <h2 class="section-heading reveal">Bagaimana Seharusnya</h2>
+
+  <p class="reveal">Kalau tujuan MPLS dan ospek memang perkenalan lingkungan sekolah atau kampus, desainnya harus dimulai dari tujuan itu. Dalam teori kurikulum, pendekatan ini dikenal sebagai <em>backward design</em>: tentukan dulu apa yang ingin dicapai, baru rancang kegiatan yang benar-benar mengarah ke sana.</p>
+
+  <div class="highlight-box reveal">
+    <h4>Prinsip MPLS dan Ospek yang Seharusnya</h4>
+    <ul>
+      <li>Perkenalan senior-junior dilakukan langsung dalam acara resmi dengan nama dan peran masing-masing, bukan lewat perburuan tanda tangan</li>
+      <li>Pemahaman lingkungan sekolah dibangun lewat pendampingan bertahap, bukan hukuman fisik</li>
+      <li>Atribut yang diwajibkan harus relevan dengan kegiatan pembelajaran, bukan sekadar membebani atau mempermalukan</li>
+      <li>Seluruh kegiatan dipimpin guru dengan OSIS sebagai pendukung, sesuai Permendikdasmen No. 12 Tahun 2026</li>
+      <li>Efektivitas orientasi diukur dari pemahaman siswa tentang lingkungan barunya, bukan dari seberapa lelah atau terbebani mereka</li>
+    </ul>
+  </div>
+
+  <div class="pull-quote reveal">
+    <p>Budaya kekerasan dan perpeloncoan dalam masa orientasi siswa sulit diputus karena adanya ruang kosong pengawasan dari pihak sekolah. Guru sering kali melepaskan tanggung jawab penuh kepada OSIS atau senior, padahal aturan sudah jelas melarang keterlibatan siswa sebagai penentu utama kegiatan.</p>
+    <cite>Retno Listyarti, Dewan Pakar Federasi Serikat Guru Indonesia (FSGI)</cite>
+  </div>
+
+  <div class="pull-quote reveal">
+    <p>Sekolah wajib melarang perpeloncoan. Jadikan MPLS sebagai semangat baru untuk mencapai cita-cita yang kalian impikan.</p>
+    <cite>Prof. Dr. Abdul Mu'ti, M.Ed., Menteri Pendidikan Dasar dan Menengah</cite>
+  </div>
+
+  <p class="reveal">Data FSGI menunjukkan kekerasan fisik di satuan pendidikan masih menempati posisi tertinggi sepanjang 2025, dengan 27 kasus dan 73 korban dari total 60 kasus kekerasan yang tercatat. Artinya regulasi yang ada belum cukup bekerja sendirian. Yang masih kurang adalah keberanian institusi untuk mengakui bahwa ini bukan cuma ulah oknum yang muncul sesekali, tapi pola yang terus diwariskan karena tidak pernah benar-benar dihentikan.</p>
+
+  <div class="article-note reveal">
+    <strong>Jika kamu atau orang di sekitarmu mengalami kekerasan atau perpeloncoan saat MPLS maupun ospek</strong>, kamu bisa melapor ke Kementerian PPPA melalui telepon <strong>129</strong> atau WhatsApp ke <strong>08111129129</strong>. Untuk laporan terkait sekolah, tersedia juga kanal di <strong>ult.kemdikbud.go.id</strong>.
+  </div>
+
+  <div class="sources reveal">
+    <h3>Sumber &amp; Referensi</h3>
+    <ol>
+      <li>Permendikdasmen No. 12 Tahun 2026 tentang Pengenalan Lingkungan Sekolah bagi Siswa Baru. <a href="https://jdih.kemdikbud.go.id" target="_blank">jdih.kemdikbud.go.id</a></li>
+      <li>Permendikbud No. 18 Tahun 2016 tentang Pengenalan Lingkungan Sekolah bagi Siswa Baru.</li>
+      <li>KPAI. <em>KPAI Tegaskan Jangan Ada Kekerasan dalam MPLS.</em> <a href="https://www.kpai.go.id" target="_blank">kpai.go.id</a></li>
+      <li>FSGI. <em>Catatan Akhir Tahun FSGI 2025.</em> Desember 2025. <a href="https://fsgi.or.id" target="_blank">fsgi.or.id</a></li>
+      <li>Tempo. <em>5 Fakta Kematian Mahasiswa STIP Jakarta yang Dianiaya Senior.</em> 2024. <a href="https://www.tempo.co" target="_blank">tempo.co</a></li>
+      <li>Tirto.ID. <em>Kronologi Penganiayaan Siswa STIP Putu Satria Hingga Meninggal.</em> 2024. <a href="https://tirto.id" target="_blank">tirto.id</a></li>
+      <li>Poskota. <em>3 Terdakwa Kasus Kematian Taruna STIP Jakarta Dituntut 2-6 Tahun Penjara.</em> Januari 2025. <a href="https://poskota.co.id" target="_blank">poskota.co.id</a></li>
+
+      <li>Hipwee. <em>Diksar Mapala UII, 3 Mahasiswa Tewas.</em> 2017. <a href="https://www.hipwee.com" target="_blank">hipwee.com</a></li>
+      <li>Lentera. <em>MPLS SMP di Blitar: Sekitar 20 Siswa Aniaya Seorang Murid Kelas 1.</em> Juli 2025. <a href="https://lentera.co" target="_blank">lentera.co</a></li>
+      <li>ABC News. <em>Inside the Bus During Drum Major Robert Champion's Fatal Hazing.</em> <a href="https://abcnews.com" target="_blank">abcnews.com</a></li>
+      <li>Wikipedia. <em>Death of Sanda Dia</em>, KU Leuven, Belgia. <a href="https://en.wikipedia.org/wiki/Death_of_Sanda_Dia" target="_blank">en.wikipedia.org</a></li>
+      <li>The Local France. <em>Analysis: The problem of hazing in French universities.</em> Januari 2026. <a href="https://www.thelocal.fr" target="_blank">thelocal.fr</a></li>
+      <li>Service-Public.fr. <em>What is hazing? (Bizutage).</em> <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2275" target="_blank">service-public.gouv.fr</a></li>
+      <li>Washington Post. <em>What to know about the Northwestern hazing scandal and allegations.</em> 2023. <a href="https://www.washingtonpost.com/sports/2023/08/02/northwest-hazing-scandal-lawsuit-allegations/" target="_blank">washingtonpost.com</a></li>
+    <li>Al Jazeera. <em>US athletes allege hazing abuse at Northwestern University.</em> 2023. <a href="https://www.aljazeera.com/news/2023/7/19/us-athletes-allege-hazing-abuse-at-northwestern-university" target="_blank">aljazeera.com</a></li>
+    </ol>
+  </div>
+
+</div>
+</main>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
+    });
+  }, {threshold: 0.02, rootMargin:'0px 0px -20px 0px'});
+  const revEls = document.querySelectorAll(".reveal");
+  revEls.forEach(el => io.observe(el));
+  setTimeout(()=>{ revEls.forEach(el=>{ if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); }); }, 100);
+</script>
+
+<script>
+  const savedTheme = localStorage.getItem("kbdi-theme");
+  if (savedTheme === "light") document.documentElement.classList.add("light");
+  fetch("https://edukbdi.github.io/header.html")
+    .then(r => r.text())
+    .then(html => {
+      document.body.insertAdjacentHTML("afterbegin", html);
+      const header = document.getElementById("kbdi-header");
+      if (savedTheme === "light") header.classList.add("kbdi-light");
+      document.getElementById("kbdiThemeToggle").addEventListener("click", function() {
+        const isLight = document.documentElement.classList.toggle("light");
+        header.classList.toggle("kbdi-light", isLight);
+        localStorage.setItem("kbdi-theme", isLight ? "light" : "dark");
+        const footer = document.getElementById("kbdi-footer");
+        if (footer) footer.classList.toggle("kbdi-light", isLight);
+      });
+    });
+  fetch("https://edukbdi.github.io/footer.html")
+    .then(r => r.text())
+    .then(html => {
+      document.body.insertAdjacentHTML("beforeend", html);
+      const footer = document.getElementById("kbdi-footer");
+      if (footer && savedTheme === "light") footer.classList.add("kbdi-light");
+    });
+</script>
+
+</body>
+</html>
